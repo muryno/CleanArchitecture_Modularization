@@ -14,6 +14,7 @@ android {
         minSdk = BuildAndroidConfig.MIN_SDK_VERSION
         targetSdk = BuildAndroidConfig.TARGET_SDK_VERSION
         multiDexEnabled = true
+
     }
     namespace = BuildAndroidConfig.APPLICATION_ARTIST_UI
 
