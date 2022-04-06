@@ -1,4 +1,5 @@
 package com.muryno.presention.artist.viewmodel
+import android.util.Log
 
 import com.muryno.domain.artist.model.ArtistDomainModel
 import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
@@ -10,6 +11,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 private typealias DoNothing = Unit
+
+private const val TAG = "SingleLiveEvent"
 
 @HiltViewModel
 class ArtistViewModel @Inject constructor(
@@ -27,7 +30,7 @@ class ArtistViewModel @Inject constructor(
             artistUseCase,
             artistName,
             onSuccess = { artist -> presentDishDetails(artist) },
-            onException = { DoNothing }
+            onException = { Log.w(TAG, "Artist View model exception") }
         )
     }
 
