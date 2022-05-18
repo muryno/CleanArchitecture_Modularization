@@ -24,6 +24,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
      private lateinit var artistListView: RecyclerView
      private lateinit var progressBar: ProgressBar
      private lateinit var searchButton: Button
+     private lateinit var closeButton: Button
      private lateinit var musicSearch: EditText
      private lateinit var emptyState: View
     override fun View.bindViews() {
