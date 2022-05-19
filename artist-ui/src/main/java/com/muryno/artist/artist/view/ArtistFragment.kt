@@ -31,6 +31,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
         artistListView = findViewById(R.id.artist_recyclerView)
         progressBar = findViewById(R.id.artist_progressbar)
         searchButton = findViewById(R.id.search_button)
+        closeButton = findViewById(R.id.close_button)
         musicSearch = findViewById(R.id.music_search)
         emptyState = findViewById(R.id.empty_state)
     }
