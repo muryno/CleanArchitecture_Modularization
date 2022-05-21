@@ -63,8 +63,9 @@ class ArtistAdapter:
             txtName.text = item.name
 
             txtCity.text = item.city
-            
+
             txtGender.text = item.gender
+            
             txtCountry.text = item.country
             txtDescriptionLabel.text = item.description
             itemView.setOnClickListener {
