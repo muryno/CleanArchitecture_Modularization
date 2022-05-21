@@ -5,6 +5,7 @@ data class ArtistAlbumDomainModel(
     val primaryType: String,
     val releaseDate: String,
     val title: String,
+    val image: String,
     val id: String,
     val disambiguation: String
 )
