@@ -13,9 +13,12 @@ data class ArtistAlbumDomainModel(
     val title: String,
 
     val shortDescription: String,
-    
+
     val fullDescription: String,
+
     val image: String,
+
     val id: String,
+    
     val disambiguation: String
 )
