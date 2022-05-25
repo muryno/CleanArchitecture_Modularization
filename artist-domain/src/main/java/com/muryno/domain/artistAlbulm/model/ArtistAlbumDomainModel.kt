@@ -9,8 +9,9 @@ data class ArtistAlbumDomainModel(
     val releaseDate: String,
 
     val label: String,
-    
+
     val title: String,
+    
     val shortDescription: String,
     val fullDescription: String,
     val image: String,
