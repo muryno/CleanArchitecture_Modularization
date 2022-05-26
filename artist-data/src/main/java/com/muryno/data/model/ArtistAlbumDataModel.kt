@@ -5,6 +5,7 @@ data class ArtistAlbumDataModel(
     val genre: String,
     val label: String,
     val shortDescription: String,
+    val fullDescription: String,
     val releaseDate: String,
     val title: String,
     val id: String,
