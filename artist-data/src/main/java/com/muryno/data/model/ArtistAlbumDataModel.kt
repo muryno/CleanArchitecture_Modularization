@@ -14,8 +14,9 @@ data class ArtistAlbumDataModel(
     val albumImage: String,
 
     val releaseDate: String,
-    
+
     val title: String,
+    
     val id: String,
     val disambiguation: String
 )
