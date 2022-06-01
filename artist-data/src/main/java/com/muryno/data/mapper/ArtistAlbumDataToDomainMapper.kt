@@ -7,6 +7,7 @@ class ArtistAlbumDataToDomainMapper {
     fun toDomain(input: ArtistAlbumDataModel): ArtistAlbumDomainModel {
         return ArtistAlbumDomainModel(
             id = input.id,
+            genre = input.genre,
             primaryType = input.primaryType,
             title = input.title,
             releaseDate = input.releaseDate,
