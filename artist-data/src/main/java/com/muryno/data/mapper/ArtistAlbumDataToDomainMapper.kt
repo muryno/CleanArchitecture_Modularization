@@ -8,6 +8,7 @@ class ArtistAlbumDataToDomainMapper {
         return ArtistAlbumDomainModel(
             id = input.id,
             genre = input.genre,
+            label = input.label,
             albumImage = input.albumImage,
             primaryType = input.primaryType,
             title = input.title,
