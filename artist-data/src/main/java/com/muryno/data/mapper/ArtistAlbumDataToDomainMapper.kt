@@ -10,6 +10,7 @@ class ArtistAlbumDataToDomainMapper {
             genre = input.genre,
             label = input.label,
             shortDescription = input.shortDescription,
+            fullDescription = input.fullDescription,
             albumImage = input.albumImage,
             primaryType = input.primaryType,
             title = input.title,
