@@ -117,6 +117,9 @@ class ArtistLiveRepositoryTest {
         val name = "artist"
         val firstReleaseDate = "wizzy"
         val primaryType = "artist"
+        val genre: "afro"
+
+
 
 
         val artistAlbumDataModelList = arrayListOf(
