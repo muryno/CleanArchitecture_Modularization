@@ -119,6 +119,7 @@ class ArtistLiveRepositoryTest {
         val primaryType = "artist"
         val genre: "afro"
         val label: "sony"
+        val shortDescription: "good things"
 
 
 
