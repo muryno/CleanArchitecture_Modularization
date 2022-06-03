@@ -118,7 +118,7 @@ class ArtistLiveRepositoryTest {
         val firstReleaseDate = "wizzy"
         val primaryType = "artist"
         val genre: "afro"
-
+        val label: "sony"
 
 
 
