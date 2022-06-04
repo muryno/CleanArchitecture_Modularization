@@ -120,6 +120,8 @@ class ArtistLiveRepositoryTest {
         val genre: "afro"
         val label: "sony"
         val shortDescription: "good things"
+        val fullDescription: "good things come to everyone"
+        
 
 
 
