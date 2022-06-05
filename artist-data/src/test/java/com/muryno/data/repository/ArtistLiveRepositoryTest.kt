@@ -121,7 +121,7 @@ class ArtistLiveRepositoryTest {
         val label: "sony"
         val shortDescription: "good things"
         val fullDescription: "good things come to everyone"
-        val albumImages: "https://img.com" 
+        val albumImage: "https://img.com" 
 
 
 
