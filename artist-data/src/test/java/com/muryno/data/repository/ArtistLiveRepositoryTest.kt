@@ -129,6 +129,7 @@ class ArtistLiveRepositoryTest {
         val artistAlbumDataModelList = arrayListOf(
             ArtistAlbumDataModel(
                 id = id,
+                label = label,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
