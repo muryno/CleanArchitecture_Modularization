@@ -130,6 +130,7 @@ class ArtistLiveRepositoryTest {
             ArtistAlbumDataModel(
                 id = id,
                 label = label,
+                fullDescription = fullDescription,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
