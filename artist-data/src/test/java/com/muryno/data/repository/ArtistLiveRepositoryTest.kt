@@ -131,6 +131,7 @@ class ArtistLiveRepositoryTest {
                 id = id,
                 label = label,
                 albumImage = albumImage,
+                genre = genre,
                 shortDescription = shortDescription
                 fullDescription = fullDescription,
                 title =  name,
