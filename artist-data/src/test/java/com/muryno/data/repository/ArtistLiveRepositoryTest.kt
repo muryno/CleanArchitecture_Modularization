@@ -144,6 +144,7 @@ class ArtistLiveRepositoryTest {
         val expectedResult = arrayListOf(
             ArtistAlbumDomainModel(
                 id = id,
+                label = label,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
