@@ -145,6 +145,7 @@ class ArtistLiveRepositoryTest {
             ArtistAlbumDomainModel(
                 id = id,
                 label = label,
+                genre = genre,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
