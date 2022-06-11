@@ -147,6 +147,8 @@ class ArtistLiveRepositoryTest {
                 label = label,
                 genre = genre,
                 albumImage = albumImage,
+                shortDescription = shortDescription,
+
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
