@@ -149,7 +149,6 @@ class ArtistLiveRepositoryTest {
                 albumImage = albumImage,
                 shortDescription = shortDescription,
                 fullDescription = fullDescription,
-
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
