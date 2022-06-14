@@ -42,6 +42,7 @@ class ArtistAlbumUseCaseTest {
                             ArtistAlbumDomainModel(
                                     disambiguation = "abc",
                                     id = "123",
+                                    genre = "afro"
                                     primaryType = "music",
                                     title = "asder",
                                     releaseDate = "23-2-2022"
