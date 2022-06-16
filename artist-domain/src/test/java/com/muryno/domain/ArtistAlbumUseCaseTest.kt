@@ -44,7 +44,7 @@ class ArtistAlbumUseCaseTest {
                                     id = "123",
                                     genre = "afro",
                                     label = "sony",
-                                    fullDescription = "good things come to everyone"
+                                    fullDescription = "good things come to everyone",
                                     primaryType = "music",
                                     title = "asder",
                                     releaseDate = "23-2-2022"
