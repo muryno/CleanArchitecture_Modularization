@@ -22,6 +22,8 @@ private val artistDomainModel =
                 state = "artist",
                 score = 1,
                 gender = "male"
+                label = "sony",
+                fullDescription = "good things come"
         )
 
 const val artistName = "Wizkid"
