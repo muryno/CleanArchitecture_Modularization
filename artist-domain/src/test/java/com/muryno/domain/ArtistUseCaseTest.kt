@@ -21,9 +21,8 @@ private val artistDomainModel =
                 type = "wizzy",
                 state = "artist",
                 score = 1,
-                gender = "male"
-                label = "sony",
-                fullDescription = "good things come"
+                gender = "male",
+                country = "west"
         )
 
 const val artistName = "Wizkid"
