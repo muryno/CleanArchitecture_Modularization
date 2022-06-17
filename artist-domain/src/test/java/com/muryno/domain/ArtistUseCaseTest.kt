@@ -13,50 +13,41 @@ import org.mockito.BDDMockito.given
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
-private val artistDomainModel = ArtistDomainModel(
-    disambiguation = "ader",
-    id = "123",
-    name = "artist",
-    type = "wizzy",
-    state = "artist",
-    score = 1,
-    gender = "male"
-)
+private val artistDomainModel =
+        ArtistDomainModel(
+                disambiguation = "ader",
+                id = "123",
+                name = "artist",
+                type = "wizzy",
+                state = "artist",
+                score = 1,
+                gender = "male"
+        )
 
 const val artistName = "Wizkid"
 
 @RunWith(MockitoJUnitRunner::class)
 class ArtistUseCaseTest {
 
-
     private lateinit var classUnderTest: ArtistUseCaseExecutor
 
-    @Mock
-    private lateinit var coroutineContextProvider: CoroutineContextProvider
+    @Mock private lateinit var coroutineContextProvider: CoroutineContextProvider
 
-    @Mock
-    private lateinit var artistRepository: ArtistRepository
+    @Mock private lateinit var artistRepository: ArtistRepository
 
     @Before
     fun setup() {
 
-        classUnderTest = ArtistUseCaseExecutor(
-            artistRepository = artistRepository,
-            coroutineContextProvider
-        )
+        classUnderTest =
+                ArtistUseCaseExecutor(artistRepository = artistRepository, coroutineContextProvider)
     }
-
 
     @Test
     fun `When actualResult Then return  expectedResult Response`() {
         runBlocking {
             val expectedResult = arrayListOf(artistDomainModel)
             // Given
-            given(
-                artistRepository.artistList(artistName = artistName)
-            ).willReturn(
-                expectedResult
-            )
+            given(artistRepository.artistList(artistName = artistName)).willReturn(expectedResult)
 
             // When
             val actualResult = classUnderTest.executeInBackground(request = artistName)
@@ -65,6 +56,4 @@ class ArtistUseCaseTest {
             assertEquals(expectedResult, actualResult)
         }
     }
-
-
 }
