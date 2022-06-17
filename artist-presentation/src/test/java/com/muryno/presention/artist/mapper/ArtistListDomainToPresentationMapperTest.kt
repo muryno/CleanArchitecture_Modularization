@@ -59,6 +59,7 @@ class ArtistListApiDataToDomainMapperTest(
             name: String,
             city: String,
             state: String,
+            country: String,
             score: Int
         ) = arrayOf(
             ArtistDomainModel(
@@ -68,6 +69,7 @@ class ArtistListApiDataToDomainMapperTest(
                 type = city,
                 state = state,
                 score = 1,
+                country = country,
                 gender = gender
             ),
             ArtistPresentationModel(
