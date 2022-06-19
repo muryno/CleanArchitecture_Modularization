@@ -23,6 +23,7 @@ class ArtistListApiDataToDomainMapperTest(
         private const val DISH_COMMENT_1 = "Great spicing."
         private const val DISH_RATING_1 = ""
         private const val RESTAURANT_NAME_1 = ""
+        private const val COUNTRY_NAME = ""
         private const val DISH_ID_2 = "ID2"
         private const val DISH_NAME_2 = "Cauliflower Steak"
         private const val DISH_COMMENT_2 = "So dry."
@@ -40,6 +41,7 @@ class ArtistListApiDataToDomainMapperTest(
                 city = RESTAURANT_NAME_1,
                 state = RESTAURANT_NAME_1,
                 score = 1
+                country = COUNTRY_NAME
             ),
             testCase(
                 disambiguation = DISH_ID_2,
