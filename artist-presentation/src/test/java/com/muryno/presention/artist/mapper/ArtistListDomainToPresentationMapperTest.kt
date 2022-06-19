@@ -78,6 +78,7 @@ class ArtistListApiDataToDomainMapperTest(
                 name = name,
                 city = city,
                 state = state,
+                country = country,
                 score =score,
                 gender = gender
             )
