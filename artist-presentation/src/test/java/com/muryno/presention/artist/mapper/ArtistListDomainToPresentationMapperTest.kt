@@ -40,7 +40,7 @@ class ArtistListApiDataToDomainMapperTest(
                 name = DISH_RATING_1,
                 city = RESTAURANT_NAME_1,
                 state = RESTAURANT_NAME_1,
-                score = 1
+                score = 1,
                 country = COUNTRY_NAME
             ),
             testCase(
@@ -50,7 +50,8 @@ class ArtistListApiDataToDomainMapperTest(
                 name = DISH_RATING_2,
                 city = RESTAURANT_NAME_2,
                 state = RESTAURANT_NAME_2,
-                score = 1
+                score = 1,
+                country = COUNTRY_NAME
             )
         )
 
