@@ -8,6 +8,7 @@ data class ArtistApiModel(
     @SerializedName("begin-area")
     val beginArea: BeginArea?,
     val disambiguation: String?,
+    val state: String,
     val gender: String?,
     @SerializedName("gender-id")
     val genderId: String,
