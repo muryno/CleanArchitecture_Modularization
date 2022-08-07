@@ -15,5 +15,6 @@ data class AlbumReleaseGroupApiModel(
     val secondaryTypeIds: List<String>,
     @SerializedName("secondary-types")
     val secondaryTypes: List<String>,
-    val title: String
+    val title: String,
+    val genre: String?
 )

@@ -10,6 +10,7 @@ class ArtistAlbumApiToResponseDataMapper {
             id = input.id,
             primaryType = input.primaryType,
             title = input.title,
+            genre = input.genre ?: "",
             releaseDate = input.firstReleaseDate,
             disambiguation = input.disambiguation
         )
