@@ -12,18 +12,15 @@ android {
         minSdk = BuildAndroidConfig.MIN_SDK_VERSION
         targetSdk =BuildAndroidConfig.TARGET_SDK_VERSION
         multiDexEnabled = true
-        testInstrumentationRunner = "com.muryno.trendinggithubuser.HiltTestRunner"
 
     }
 
-    namespace = BuildAndroidConfig.APPLICATION_DATA
+    namespace = BuildAndroidConfig.APPLICATION_DOMAIN
 
 
 }
 
 dependencies {
-
-    implementation(project(BuildModules.DOMAIN))
 
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.Core)
