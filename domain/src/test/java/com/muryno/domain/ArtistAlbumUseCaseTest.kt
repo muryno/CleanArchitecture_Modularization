@@ -2,10 +2,8 @@ package com.muryno.domain
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.model.ArtistAlbumDomainModel
-import com.muryno.domain.model.ArtistDomainModel
 import com.muryno.domain.repository.ArtistRepository
 import com.muryno.domain.usecase.ArtistAlbumUserUseCase
-import com.muryno.domain.usecase.ArtistUseCase
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.Before

@@ -27,7 +27,7 @@ private val artistDomainModel = ArtistDomainModel(
 const val artistName = "Wizkid"
 
 @RunWith(MockitoJUnitRunner::class)
-class ArtistUseCaseTest {
+class ArtistUsecaseTest {
 
 
     @get:Rule
