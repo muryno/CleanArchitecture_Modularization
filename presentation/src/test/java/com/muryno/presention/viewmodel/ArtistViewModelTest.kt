@@ -29,10 +29,10 @@ private val artistDomainModel = ArtistDomainModel(
 )
 
 private val artistPresentationModel = ArtistModel(
-    disambiguation = "ader",
+    description = "ader",
     id = "123",
     name = "artist",
-    type = "wizzy",
+    city = "wizzy",
     state = "artist",
     score = 1,
     gender = "male"

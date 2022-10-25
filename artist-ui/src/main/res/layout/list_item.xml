@@ -18,71 +18,89 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
-        <LinearLayout
-            android:id="@+id/list_item_layout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1.4"
-            android:orientation="horizontal">
+            android:padding="10dp"
+            android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageView"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="0.5"
-                android:scaleType="fitStart"
-                tools:srcCompat="@tools:sample/avatars" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:text="title"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.9"
-                android:orientation="vertical"
-                android:layout_marginEnd="5dp"
-                android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Artist"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name"
+                app:layout_constraintStart_toStartOf="@+id/txt_name"
+                />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:text="title"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="4"
-                    android:textSize="13sp" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="City"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                app:layout_constraintStart_toStartOf="@+id/txt_city"
+                />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_height="wrap_content">
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/milage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="13sp" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/reg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:textSize="13sp" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </LinearLayout>
-        </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:text="Male"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="gender"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_gender"
+                app:layout_constraintStart_toStartOf="@+id/txt_gender"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_description_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="13sp"
+                tools:text= ""
+                app:layout_constraintTop_toBottomOf="@+id/txt_name_label"
+                app:layout_constraintStart_toStartOf="@+id/txt_name_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

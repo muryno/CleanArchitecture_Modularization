@@ -30,10 +30,10 @@ class ArtistViewModel @Inject constructor(
     val errorState: LiveData<Boolean> = _errorState
 
 
-    fun artistQuery(artistId: String) {
+    fun artistQuery(artistName: String) {
         viewModelScope.launch {
             try {
-                artistUseCase.execute(artistId).let {
+                artistUseCase.execute(artistName).let {
                     if (it.isNotEmpty()) {
                         _artistState.value = it.map (artistDomainMapper::toPresentation)
                     }else {

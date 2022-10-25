@@ -24,9 +24,12 @@ class NetWorkModuleDI() {
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("http://musicbrainz.org/ws/2/")
+            .baseUrl("https://musicbrainz.org/")
             .client(client)
+            .addConverterFactory(
+                GsonConverterFactory.create())
             .build()
+
     }
 
     @Singleton

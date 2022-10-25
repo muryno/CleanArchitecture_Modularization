@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -60,36 +59,17 @@ class ArtistAdapter @Inject constructor() :
     class MyViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
 
-//        private val title: TextView = itemView.findViewById(R.id.txt_title)
-//        private val details: TextView = itemView.findViewById(R.id.txt_details)
-//        private val txtUrl: TextView = itemView.findViewById(R.id.txt_url)
-//        private val language: TextView = itemView.findViewById(R.id.txt_language)
-//        private val star: TextView = itemView.findViewById(R.id.txt_star)
-//        private val profileImage: ImageView = itemView.findViewById(R.id.profile_image)
-//        private val expandLayout: View = itemView.findViewById(R.id.expand_layout)
-//
+        private val txtName: TextView = itemView.findViewById(R.id.txt_name)
+        private val txtCity: TextView = itemView.findViewById(R.id.txt_city)
+        private val txtGender: TextView = itemView.findViewById(R.id.txt_gender)
+        private val txtDescriptionLabel: TextView = itemView.findViewById(R.id.txt_description_label)
 
         @SuppressLint("SetTextI18n")
         fun bind(item: ArtistModel) {
-//            title.text = item.name
-//            details.text = item.full_name
-//            txtUrl.text = item.branches_url
-//            language.text = item.language
-//            star.text = item.forks.toString()
-//            Glide.with(profileImage.context)
-//                .load(item.avatar_url)
-//                .placeholder(R.drawable.ic_baseline_person_24)
-//                .into(profileImage)
-//
-//            var expand = false
-//            itemView.setOnClickListener {
-//                expand = !expand
-//                if (expand) {
-//                    expandLayout.visibility = View.VISIBLE
-//                } else {
-//                    expandLayout.visibility = View.GONE
-//                }
-//            }
+            txtName.text = item.name
+            txtCity.text = item.city
+            txtGender.text = item.gender
+            txtDescriptionLabel.text = item.description
         }
     }
 

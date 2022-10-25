@@ -7,14 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.muryno.artist.R
+import com.muryno.artist.adapter.ArtistAlbumAdapter
 import com.muryno.presention.viewmodel.ArtistAlbumViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ArtistDetailsFragment : Fragment() {
 
     private val viewModel by viewModels<ArtistAlbumViewModel>()
 
+
+    @Inject
+    lateinit var adapter: ArtistAlbumAdapter
     //private val args: DetailsFragmentArgs by navArgs()
 
 

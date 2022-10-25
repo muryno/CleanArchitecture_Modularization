@@ -10,9 +10,9 @@ class ArtistDomainToPresentationMapper : DomainToPresentationMapper<ArtistDomain
             id = input.id,
             name = input.name,
             gender = input.gender,
-            type = input.type,
+            city = input.type,
             state = input.name,
-            disambiguation = input.disambiguation,
+            description = input.disambiguation,
             score = input.score
         )
     }
