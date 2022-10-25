@@ -1,7 +1,7 @@
 
 object BuildAndroidConfig {
 
-    const val APPLICATION_ID = "com.muryno.trendinggithubuser"
+    const val APPLICATION_ID = "com.muryno.muzic"
 
     const val APPLICATION_DATA = "com.muryno.data"
     const val APPLICATION_DOMAIN = "com.muryno.domain"
