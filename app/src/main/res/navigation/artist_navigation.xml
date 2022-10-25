@@ -13,6 +13,5 @@
         android:id="@+id/artist_fragment_details_id"
         android:name="com.muryno.artist.ArtistDetailsFragment"
         android:label="ArtistDetailsFragment">
-
     </fragment>
 </navigation>

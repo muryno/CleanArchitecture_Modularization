@@ -1,25 +1,77 @@
 plugins {
-    id(BuildPlugins.ANDROID_LIBRARY)
-    id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
-    id(BuildPlugins.KOTLIN_KAPT)
-    id(BuildPlugins.DAGGER_HILT)
-    id (BuildPlugins.NAV_GRAPH)
+    id 'com.android.application'
+    id 'kotlin-android'
+    id  'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
+    compileSdk 33
 
     defaultConfig {
-        minSdk = BuildAndroidConfig.MIN_SDK_VERSION
-        targetSdk =BuildAndroidConfig.TARGET_SDK_VERSION
-        multiDexEnabled = true
+        applicationId BuildAndroidConfig.APPLICATION_ID
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
 
+
+        namespace BuildAndroidConfig.APPLICATION_ID
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    namespace = BuildAndroidConfig.APPLICATION_ID
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
 
 
+    kapt {
+        correctErrorTypes true
+        javacOptions {
+            option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'androidx.test:monitor:1.4.0'
+        }
+    }
 }
+
+
 
 dependencies {
 
