@@ -40,6 +40,8 @@ Below is the image of the architecture used
 This approach help to build scalable, maintainable and robust application with software good practice(SOLID ,DRY,KISS, design patterm) in place 
 
 
+Here is the app screen
 
+<img width="336" alt="Screenshot 2022-10-25 at 22 43 48" src="https://user-images.githubusercontent.com/26343440/197887992-51323194-0dcb-48e6-ae93-e570633aa807.png">
 
 
