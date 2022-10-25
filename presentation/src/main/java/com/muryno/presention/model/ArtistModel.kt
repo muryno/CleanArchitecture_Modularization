@@ -1,5 +1,7 @@
 package com.muryno.presention.model
 
+import java.io.Serializable
+
 
 data class ArtistModel(
     val id: String,
@@ -9,4 +11,4 @@ data class ArtistModel(
     val state: String,
     val description: String,
     val score: Int
-)
+): Serializable

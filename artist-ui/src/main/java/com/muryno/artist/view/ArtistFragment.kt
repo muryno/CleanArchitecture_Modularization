@@ -5,24 +5,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
-import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
 import com.muryno.artist.adapter.ArtistAdapter
-import com.muryno.artist.adapter.ArtistAlbumAdapter
 import com.muryno.presention.viewmodel.ArtistViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class ArtistFragment : Fragment() {
+
+    @Inject
+    lateinit var adapter: ArtistAdapter
 
     private val viewModel by viewModels<ArtistViewModel>()
 
@@ -37,10 +38,7 @@ class ArtistFragment : Fragment() {
 
     private val emptyState: View get() = requireView().findViewById(R.id.empty_state)
 
-    private val artist = "drake"
-
-    @Inject
-    lateinit var adapter: ArtistAdapter
+    private val artist = "London"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +46,6 @@ class ArtistFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.artist_fragment_home, container, false)
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,8 +90,11 @@ class ArtistFragment : Fragment() {
             }
 
         }
+        adapter.clickedArtist = {
+           val action = ArtistFragmentDirections.actionArtistFragmentToArtistDetailsFragment(it)
+            view.findNavController().navigate(action)
+        }
     }
-
 
     private fun closeSoftKeyboard() {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

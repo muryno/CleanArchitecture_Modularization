@@ -7,6 +7,6 @@ data class AristAlbumApiModel(
     val releaseGroupCount: Int,
     @SerializedName("release-group-offset")
     val releaseGroupOffset: Int,
-    @SerializedName("release_groups")
+    @SerializedName("release-groups")
     val albumReleaseGroupApiModels: List<AlbumReleaseGroupApiModel>
 )

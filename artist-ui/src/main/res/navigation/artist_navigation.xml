@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/artistFragment">
+
+    <fragment
+        android:id="@+id/artistFragment"
+        android:name="com.muryno.artist.view.ArtistFragment"
+        tools:layout="@layout/artist_fragment_home"
+        android:label="ArtistFragment">
+
+        <action
+            android:id="@+id/action_artistFragment_to_artistDetailsFragment"
+            app:destination="@id/artistDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/artistDetailsFragment"
+        android:name="com.muryno.artist.view.ArtistDetailsFragment"
+        tools:layout="@layout/artist_fragment_details"
+        android:label="ArtistDetailsFragment">
+
+        <argument
+            android:name="artist_model"
+            app:argType="com.muryno.presention.model.ArtistModel" />
+
+        <action
+            android:id="@+id/action_artistDetailsFragment_to_artistFragment"
+            app:destination="@id/artistFragment" />
+    </fragment>
+
+</navigation>
+
+

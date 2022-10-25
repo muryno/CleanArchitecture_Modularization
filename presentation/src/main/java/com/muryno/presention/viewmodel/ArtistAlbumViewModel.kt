@@ -28,8 +28,9 @@ class ArtistAlbumViewModel @Inject constructor(
     private val _errorState: MutableLiveData<Boolean> = MutableLiveData()
     val errorState: LiveData<Boolean> = _errorState
 
+   private val album = "album"
 
-    fun artistAlbumQuery(artistId: String, type: String) {
+    fun artistAlbumQuery(artistId: String, type: String = album ) {
         viewModelScope.launch {
             try {
                 artistAlbumUseCase.execute(artistId,type).let {

@@ -23,8 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Musiz"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:text="Artist"
             android:textSize="34sp" />
 
 

@@ -27,7 +27,7 @@ interface MusicApiService {
     @GET("ws/2/release-group")
     suspend fun fetchArtistAlbumFromServer(
         @Query("artist") artistId: String,
-        @Query("type") type: String,
+        @Query("type") type: String = "album",
         @Query("fmt") fmt: String = "json"
     ): AristAlbumApiModel
 
