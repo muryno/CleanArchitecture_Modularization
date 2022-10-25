@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class ArtistApiModel(
     val aliases: List<Aliase>?,
-    val area: Area,
+    val area: Area?,
     @SerializedName("begin-area")
     val begin_area: BeginArea?,
-    val disambiguation: String,
-    val gender: String,
+    val disambiguation: String?,
+    val gender: String?,
     @SerializedName("gender-id")
     val gender_id: String,
     val id: String,
@@ -16,8 +16,8 @@ data class ArtistApiModel(
     val isnis: List<String>,
     @SerializedName("life-span")
     val life_span: LifeSpanXX?,
-    val name: String,
-    val score: Int,
+    val name: String?,
+    val score: Int?,
     @SerializedName("sort-name")
     val sort_name: String,
     val tags: List<Tag>,

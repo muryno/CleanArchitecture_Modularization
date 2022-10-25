@@ -13,12 +13,11 @@ import org.junit.runner.RunWith
 import org.mockito.BDDMockito.given
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
-import retrofit2.Response
 
 
 private val artistListApiModelOutputResult = ArtistListApiModel(
     created = "",
-    artistApiModels = emptyList(),
+    artists = emptyList(),
     count = 3,
     offset = 1
 )

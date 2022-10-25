@@ -6,11 +6,11 @@ data class Area(
     val id: String,
     @SerializedName("life-span")
     val life_span: LifeSpan?,
-    val name: String,
+    val name: String?,
     @SerializedName("sort-name")
     val sort_name: String,
     @SerializedName("type")
-    val type: String,
+    val type: String?,
     @SerializedName("type-id")
     val type_id: String
 )

@@ -20,7 +20,7 @@ class ArtistRepositoryImpl(
 
     override suspend fun artistList(artistName: String): List<ArtistDomainModel> =
         withContext(coroutine.io){
-            artistRemoteDataSource.getArtistListFromApi(artistName).artistApiModels.map(
+            artistRemoteDataSource.getArtistListFromApi(artistName).artists.map(
                 artistApiDataToDomainMapper::toDomain
             )
         }

@@ -8,6 +8,7 @@ import com.muryno.presention.model.ArtistModel
 import com.muryno.domain.usecase.ArtistUseCase
 import com.muryno.presention.mapper.ArtistDomainToPresentationMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -33,6 +34,7 @@ class ArtistViewModel @Inject constructor(
     fun artistQuery(artistName: String) {
         viewModelScope.launch {
             try {
+                _loading.postValue(true)
                 artistUseCase.execute(artistName).let {
                     if (it.isNotEmpty()) {
                         _artistState.value = it.map (artistDomainMapper::toPresentation)
@@ -42,6 +44,7 @@ class ArtistViewModel @Inject constructor(
                     _loading.postValue(false)
                 }
             } catch (e: Exception) {
+                print(e.message)
                 _errorState.postValue(true)
                 _loading.postValue(false)
             }

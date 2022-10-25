@@ -25,7 +25,7 @@ import org.mockito.junit.MockitoJUnitRunner
 
 private val artistListApiModel = ArtistListApiModel(
     created = "",
-    artistApiModels = arrayListOf(inputArtistApiModel()),
+    artists = arrayListOf(inputArtistApiModel()),
     count = 3,
     offset = 1
 )

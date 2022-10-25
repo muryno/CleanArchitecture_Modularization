@@ -1,106 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:elevation="2dp"
+    android:layout_margin="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:padding="10dp"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                tools:text="title"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_name_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Artist"
-                android:textSize="13sp"
-                app:layout_constraintTop_toBottomOf="@+id/txt_name"
-                app:layout_constraintStart_toStartOf="@+id/txt_name"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_city"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                tools:text="title"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_city_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="City"
-                android:textSize="13sp"
-                app:layout_constraintTop_toBottomOf="@+id/txt_city"
-                app:layout_constraintStart_toStartOf="@+id/txt_city"
-                />
+        android:padding="10dp"
+        android:layout_height="wrap_content">
 
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                tools:text="Male"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artist"
+            android:textSize="13sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_gender_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="gender"
-                android:textSize="13sp"
-                app:layout_constraintTop_toBottomOf="@+id/txt_gender"
-                app:layout_constraintStart_toStartOf="@+id/txt_gender"
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/purple_500"
+            tools:text="title"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/txt_name_label"
+            app:layout_constraintTop_toTopOf="@id/txt_name_label"
+            />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_description_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:textSize="13sp"
-                tools:text= ""
-                app:layout_constraintTop_toBottomOf="@+id/txt_name_label"
-                app:layout_constraintStart_toStartOf="@+id/txt_name_label"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-</LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name_label"
+            app:layout_constraintStart_toStartOf="@+id/txt_name_label"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            tools:text="title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txt_name"
+            app:layout_constraintTop_toTopOf="@id/txt_city_label"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="13sp"
+            tools:text= ""
+            app:layout_constraintTop_toBottomOf="@+id/txt_gender_label"
+            app:layout_constraintStart_toStartOf="@+id/txt_gender_label"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            tools:text="Male"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txt_city"
+            app:layout_constraintStart_toStartOf="@+id/txt_city"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_gender_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_city_label"
+            app:layout_constraintStart_toStartOf="@+id/txt_city_label"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -11,12 +11,12 @@ class ArtistApiDataToDomainMapper :
     override fun map(input: ArtistApiModel): ArtistDomainModel {
         return ArtistDomainModel(
             id = input.id,
-            name = input.name,
-            gender = input.gender,
-            type = input.area.type,
-            state = input.area.name,
-            disambiguation = input.disambiguation,
-            score = input.score
+            name = input.name ?: "" ,
+            gender = input.gender ?: "",
+            type = input.area?.sort_name ?: "",
+            state = input.area?.name ?: "",
+            disambiguation = input.disambiguation ?: "",
+            score = input.score ?: 0
         )
     }
 }
