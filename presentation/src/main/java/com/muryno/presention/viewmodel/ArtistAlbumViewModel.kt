@@ -4,19 +4,21 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.muryno.domain.model.ArtistAlbumDomainModel
 import com.muryno.domain.usecase.ArtistAlbumUserUseCase
+import com.muryno.presention.mapper.ArtistAlbumDomainToPresentationMapper
+import com.muryno.presention.model.ArtistAlbumModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class ArtistAlbumViewModel @Inject constructor(
-    private val artistAlbumUseCase: ArtistAlbumUserUseCase
+    private val artistAlbumUseCase: ArtistAlbumUserUseCase,
+    private val artistAlbumDomainMapper : ArtistAlbumDomainToPresentationMapper
 ) : ViewModel() {
 
-    private val _artistAlbumState= MutableLiveData<List<ArtistAlbumDomainModel>>()
-    var artistAlbumState: LiveData<List<ArtistAlbumDomainModel>> = _artistAlbumState
+    private val _artistAlbumState= MutableLiveData<List<ArtistAlbumModel>>()
+    var artistAlbumState: LiveData<List<ArtistAlbumModel>> = _artistAlbumState
 
 
     private val _loading: MutableLiveData<Boolean> = MutableLiveData()
@@ -32,7 +34,7 @@ class ArtistAlbumViewModel @Inject constructor(
             try {
                 artistAlbumUseCase.execute(artistId,type).let {
                     if (it.isNotEmpty()) {
-                        _artistAlbumState.value = it
+                        _artistAlbumState.value = it.map(artistAlbumDomainMapper::toPresentation)
                     }else {
                         _artistAlbumState.value = emptyList()
                     }

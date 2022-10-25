@@ -1,4 +1,4 @@
-package com.muryno.artist
+package com.muryno.artist.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.muryno.artist.R
 import com.muryno.presention.viewmodel.ArtistViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

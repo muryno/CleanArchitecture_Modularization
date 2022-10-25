@@ -3,6 +3,8 @@ package com.muryno.presention.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.model.ArtistAlbumDomainModel
 import com.muryno.domain.usecase.ArtistAlbumUserUseCase
+import com.muryno.presention.mapper.ArtistAlbumDomainToPresentationMapper
+import com.muryno.presention.model.ArtistAlbumModel
 import com.muryno.presention.utils.TestCoroutineRule
 import com.muryno.presention.utils.getOrAwaitValue
 import junit.framework.TestCase.assertEquals
@@ -17,6 +19,14 @@ import org.mockito.junit.MockitoJUnitRunner
 
 
 private val artistAlbumDomainModel = ArtistAlbumDomainModel(
+    disambiguation = "abc",
+    id = "123",
+    primaryType = "music",
+    title = "asder",
+    releaseDate = "23-2-2022"
+)
+
+private val artistAlbumPresentationModel = ArtistAlbumModel(
     disambiguation = "abc",
     id = "123",
     primaryType = "music",
@@ -43,10 +53,15 @@ class ArtistAlbumViewModelTest {
     @Mock
     private lateinit var artistAlbumUseCase: ArtistAlbumUserUseCase
 
+
+    @Mock
+    private lateinit var artistAlbumDomainMapper : ArtistAlbumDomainToPresentationMapper
+
     @Before
     fun setup() {
         classUnderTest = ArtistAlbumViewModel(
-            artistAlbumUseCase = artistAlbumUseCase
+            artistAlbumUseCase = artistAlbumUseCase,
+            artistAlbumDomainMapper
         )
     }
 
@@ -54,12 +69,21 @@ class ArtistAlbumViewModelTest {
     @Test
     fun `given artistAlbumUseCase when artistAlbumQuery Then return expected result`() {
         testCoroutineRule.runBlockingTest {
-            val expectedResult = listOf(artistAlbumDomainModel)
+            val artistAlbumDomainModelExpectedResult = listOf(artistAlbumDomainModel)
+
+            val expectedResult = listOf(artistAlbumPresentationModel)
+
             // Given
             given(
                 artistAlbumUseCase.execute(artistId = artistID, type = "")
             ).willReturn(
-                expectedResult
+                artistAlbumDomainModelExpectedResult
+            )
+
+            given(
+                artistAlbumDomainMapper.toPresentation(artistAlbumDomainModel)
+            ).willReturn(
+                artistAlbumPresentationModel
             )
 
             classUnderTest.artistAlbumQuery(artistId = artistID, type = "")

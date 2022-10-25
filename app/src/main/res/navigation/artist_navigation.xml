@@ -6,12 +6,12 @@
 
     <fragment
         android:id="@+id/artistFragmentId"
-        android:name="com.muryno.artist.ArtistFragment"
+        android:name="com.muryno.artist.view.ArtistFragment"
         android:label="ArtistFragment" />
 
     <fragment
         android:id="@+id/artist_fragment_details_id"
-        android:name="com.muryno.artist.ArtistDetailsFragment"
+        android:name="com.muryno.artist.view.ArtistDetailsFragment"
         android:label="ArtistDetailsFragment">
     </fragment>
 </navigation>
