@@ -1,4 +1,4 @@
-package com.muryno.presention
+package com.muryno.artist
 
 import org.junit.Test
 

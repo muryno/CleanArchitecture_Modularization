@@ -25,4 +25,5 @@ rootProject.name = "Muzic"
 include ':app'
 include ':data'
 include ':domain'
-include ':presention'
+include ':presentation'
+include ':artist-ui'

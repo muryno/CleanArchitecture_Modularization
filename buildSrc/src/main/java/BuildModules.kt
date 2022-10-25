@@ -15,6 +15,9 @@ object BuildModules {
     //domain
     const val PRESENTATION = ":presentation"
 
+    //artist
+    const val ARTIST = ":artist-ui"
+
     //:APP
     const val APP = ":app"
 
