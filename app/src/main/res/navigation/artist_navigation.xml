@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/artistFragmentId">
+
+    <fragment
+        android:id="@+id/artistFragmentId"
+        android:name="com.muryno.artist.ArtistFragment"
+        android:label="ArtistFragment" />
+
+    <fragment
+        android:id="@+id/artist_fragment_details_id"
+        android:name="com.muryno.artist.ArtistDetailsFragment"
+        android:label="ArtistDetailsFragment">
+
+    </fragment>
+</navigation>

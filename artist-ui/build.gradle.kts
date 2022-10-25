@@ -3,6 +3,7 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
     id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.DAGGER_HILT)
+    id (BuildPlugins.NAV_GRAPH)
 }
 
 android {
@@ -17,7 +18,9 @@ android {
 
     namespace = BuildAndroidConfig.APPLICATION_ARTIST_UI
 
-
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -31,6 +34,9 @@ dependencies {
     implementation(Libs.fragment)
     implementation(Libs.MaterialDesign)
     implementation(Libs.AppCompat)
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)

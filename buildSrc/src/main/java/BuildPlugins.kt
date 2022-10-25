@@ -17,4 +17,7 @@ object BuildPlugins {
     //HILT
     const val DAGGER_HILT = "dagger.hilt.android.plugin"
 
+    //Nav
+    const val NAV_GRAPH = "androidx.navigation.safeargs.kotlin"
+
 }

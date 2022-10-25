@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="VehicleResultModelItem"
+            type="com.muryno.cazoo.data.model.vehicleResponse.VehicleResult" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:id="@+id/list_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1.4"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:scaleType="fitStart"
+                    android:background="@drawable/image_rounded"
+                    android:contentDescription="@string/vehicles"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/textview"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:text="@string/textview"
+                        android:textSize="13sp" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:layout_width="match_parent"
+                       android:layout_marginBottom="10dp"
+                       android:layout_height="wrap_content">
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/milage"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:text="@string/textview"
+                           android:textSize="13sp" />
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/reg"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="@string/textview"
+                           app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:textSize="13sp" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>

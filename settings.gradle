@@ -5,11 +5,14 @@ pluginManagement {
         mavenCentral()
         maven { url "https://jitpack.io" }
     }
+
     resolutionStrategy {
+
         eachPlugin {
             if( requested.id.id == 'dagger.hilt.android.plugin') {
                 useModule("com.google.dagger:hilt-android-gradle-plugin:2.39.1")
             }
+
         }
     }
 }
