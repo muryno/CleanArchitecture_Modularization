@@ -16,7 +16,7 @@ import javax.inject.Inject
 class ArtistAdapter @Inject constructor() :
     RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
 
-   lateinit var clickedArtist : (ArtistModel)->Unit
+    lateinit var clickedArtist: (ArtistModel) -> Unit
 
     private val callback = object : DiffUtil.ItemCallback<ArtistModel>() {
         override fun areItemsTheSame(
@@ -58,13 +58,14 @@ class ArtistAdapter @Inject constructor() :
     }
 
 
-    class MyViewHolder(itemView: View,val clickedArtist : (ArtistModel)->Unit) :
+    class MyViewHolder(itemView: View, val clickedArtist: (ArtistModel) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
 
         private val txtName: TextView = itemView.findViewById(R.id.txt_name)
         private val txtCity: TextView = itemView.findViewById(R.id.txt_city)
         private val txtGender: TextView = itemView.findViewById(R.id.txt_gender)
-        private val txtDescriptionLabel: TextView = itemView.findViewById(R.id.txt_description_label)
+        private val txtDescriptionLabel: TextView =
+            itemView.findViewById(R.id.txt_description_label)
 
         @SuppressLint("SetTextI18n")
         fun bind(item: ArtistModel) {

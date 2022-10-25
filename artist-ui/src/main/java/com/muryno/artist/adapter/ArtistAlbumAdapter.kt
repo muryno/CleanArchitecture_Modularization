@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
 import com.muryno.presention.model.ArtistAlbumModel
-import com.muryno.presention.model.ArtistModel
 import javax.inject.Inject
 
 

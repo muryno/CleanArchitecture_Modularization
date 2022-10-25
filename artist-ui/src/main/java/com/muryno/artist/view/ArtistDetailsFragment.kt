@@ -94,12 +94,12 @@ class ArtistDetailsFragment : Fragment() {
 
     }
 
-    private fun view(artistModel: ArtistModel){
+    private fun view(artistModel: ArtistModel) {
         artistNameTextView.text = artistModel.name
         artistCityTextView.text = artistModel.city
         scoreTextView.text = artistModel.score.toString()
         artistDescription.text = artistModel.description
-        viewModel.artistAlbumQuery(artistId = artistModel.id  )
+        viewModel.artistAlbumQuery(artistId = artistModel.id)
     }
 }
 

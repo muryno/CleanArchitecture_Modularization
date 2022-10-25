@@ -13,7 +13,7 @@ class ArtistRemoteDataSourceImpl(
     override suspend fun getArtistAlbumFromServer(
         artistId: String,
         type: String
-    ): AristAlbumApiModel
-            = musicApiService.fetchArtistAlbumFromServer(artistId = artistId,type = type)
+    ): AristAlbumApiModel =
+        musicApiService.fetchArtistAlbumFromServer(artistId = artistId, type = type)
 }
 

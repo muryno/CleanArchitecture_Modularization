@@ -27,7 +27,8 @@ class NetWorkModuleDI() {
             .baseUrl("https://musicbrainz.org/")
             .client(client)
             .addConverterFactory(
-                GsonConverterFactory.create())
+                GsonConverterFactory.create()
+            )
             .build()
 
     }

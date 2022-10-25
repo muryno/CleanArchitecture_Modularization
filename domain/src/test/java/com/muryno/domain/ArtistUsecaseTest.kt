@@ -52,7 +52,7 @@ class ArtistUsecaseTest {
             val expectedResult = arrayListOf(artistDomainModel)
             // Given
             given(
-                artistRepository.artistList(artistName = artistName )
+                artistRepository.artistList(artistName = artistName)
             ).willReturn(
                 expectedResult
             )

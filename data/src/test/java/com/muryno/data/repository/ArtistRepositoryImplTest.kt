@@ -35,6 +35,7 @@ private val aristAlbumApiModel = AristAlbumApiModel(
     releaseGroupOffset = 1,
     releaseGroupCount = 4
 )
+
 private fun inputAlbumReleaseGroupApiModel() = AlbumReleaseGroupApiModel(
     disambiguation = "abc",
     firstReleaseDate = "23-2-2022",
@@ -92,9 +93,9 @@ val expectedOutputArtistDomainModel = ArtistDomainModel(
 )
 
 
-
 const val artistName = "Wizkid"
 const val artistId = "1234"
+
 @RunWith(MockitoJUnitRunner::class)
 class ArtistRepositoryImplTest {
 
@@ -114,7 +115,6 @@ class ArtistRepositoryImplTest {
 
     @Mock
     private lateinit var artistAlbumApiDataToDomainMapper: ArtistAlbumApiDataToDomainMapper
-
 
 
     @Before
@@ -139,15 +139,15 @@ class ArtistRepositoryImplTest {
         ).willReturn(artistListApiModel)
 
         given(
-            artistApiDataToDomainMapper.toDomain( inputArtistApiModel())
+            artistApiDataToDomainMapper.toDomain(inputArtistApiModel())
         ).willReturn(expectedOutputArtistDomainModel)
 
 
         // When
-        val actualCommand = classUnderTest.artistList(artistName = artistName )
+        val actualCommand = classUnderTest.artistList(artistName = artistName)
 
         // Then
-        assertEquals(expectedResult,  actualCommand)
+        assertEquals(expectedResult, actualCommand)
     }
 
     @Test
@@ -161,15 +161,15 @@ class ArtistRepositoryImplTest {
         ).willReturn(aristAlbumApiModel)
 
         given(
-            artistAlbumApiDataToDomainMapper.toDomain( inputAlbumReleaseGroupApiModel())
+            artistAlbumApiDataToDomainMapper.toDomain(inputAlbumReleaseGroupApiModel())
         ).willReturn(expectedOutputArtistAlbumDomainModel)
 
 
         // When
-        val actualCommand = classUnderTest.artistAlbum(artistId = artistId, type = "" )
+        val actualCommand = classUnderTest.artistAlbum(artistId = artistId, type = "")
 
         // Then
-        assertEquals(expectedResult,  actualCommand)
+        assertEquals(expectedResult, actualCommand)
     }
 
 

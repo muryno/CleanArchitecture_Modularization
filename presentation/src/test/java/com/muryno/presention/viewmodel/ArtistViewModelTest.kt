@@ -2,9 +2,9 @@ package com.muryno.presention.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.model.ArtistDomainModel
-import com.muryno.presention.model.ArtistModel
 import com.muryno.domain.usecase.ArtistUseCase
 import com.muryno.presention.mapper.ArtistDomainToPresentationMapper
+import com.muryno.presention.model.ArtistModel
 import com.muryno.presention.utils.TestCoroutineRule
 import com.muryno.presention.utils.getOrAwaitValue
 import junit.framework.TestCase.assertEquals
@@ -38,7 +38,7 @@ private val artistPresentationModel = ArtistModel(
     gender = "male"
 )
 
-const val ArtistName =  "wizzy"
+const val ArtistName = "wizzy"
 
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
@@ -74,7 +74,7 @@ class ArtistViewModelTest {
 
     @Test
     fun `given artistUseCase when artistQuery Then return expected result`() {
-        testCoroutineRule.runBlockingTest  {
+        testCoroutineRule.runBlockingTest {
             val artistDomainExpectedResult = listOf(artistDomainModel)
 
             val expectedResult = listOf(artistPresentationModel)
@@ -99,8 +99,6 @@ class ArtistViewModelTest {
         }
 
     }
-
-
 
 
 }

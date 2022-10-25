@@ -55,7 +55,7 @@ class ArtistAlbumViewModelTest {
 
 
     @Mock
-    private lateinit var artistAlbumDomainMapper : ArtistAlbumDomainToPresentationMapper
+    private lateinit var artistAlbumDomainMapper: ArtistAlbumDomainToPresentationMapper
 
     @Before
     fun setup() {

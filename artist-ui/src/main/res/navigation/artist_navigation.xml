@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_fragment"
@@ -9,8 +8,8 @@
     <fragment
         android:id="@+id/artistFragment"
         android:name="com.muryno.artist.view.ArtistFragment"
-        tools:layout="@layout/artist_fragment_home"
-        android:label="ArtistFragment">
+        android:label="ArtistFragment"
+        tools:layout="@layout/artist_fragment_home">
 
         <action
             android:id="@+id/action_artistFragment_to_artistDetailsFragment"
@@ -21,8 +20,8 @@
     <fragment
         android:id="@+id/artistDetailsFragment"
         android:name="com.muryno.artist.view.ArtistDetailsFragment"
-        tools:layout="@layout/artist_fragment_details"
-        android:label="ArtistDetailsFragment">
+        android:label="ArtistDetailsFragment"
+        tools:layout="@layout/artist_fragment_details">
 
         <argument
             android:name="artist_model"

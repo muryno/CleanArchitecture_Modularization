@@ -1,4 +1,3 @@
-
 object BuildAndroidConfig {
 
     const val APPLICATION_ID = "com.muryno.muzic"
@@ -18,7 +17,6 @@ object BuildAndroidConfig {
     const val VERSION_NAME = "1.0"
 
     const val ANDROID_JUNIT_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
-
 
 
 }

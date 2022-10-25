@@ -14,10 +14,10 @@ import javax.inject.Inject
 @HiltViewModel
 class ArtistAlbumViewModel @Inject constructor(
     private val artistAlbumUseCase: ArtistAlbumUserUseCase,
-    private val artistAlbumDomainMapper : ArtistAlbumDomainToPresentationMapper
+    private val artistAlbumDomainMapper: ArtistAlbumDomainToPresentationMapper
 ) : ViewModel() {
 
-    private val _artistAlbumState= MutableLiveData<List<ArtistAlbumModel>>()
+    private val _artistAlbumState = MutableLiveData<List<ArtistAlbumModel>>()
     var artistAlbumState: LiveData<List<ArtistAlbumModel>> = _artistAlbumState
 
 
@@ -28,15 +28,15 @@ class ArtistAlbumViewModel @Inject constructor(
     private val _errorState: MutableLiveData<Boolean> = MutableLiveData()
     val errorState: LiveData<Boolean> = _errorState
 
-   private val album = "album"
+    private val album = "album"
 
-    fun artistAlbumQuery(artistId: String, type: String = album ) {
+    fun artistAlbumQuery(artistId: String, type: String = album) {
         viewModelScope.launch {
             try {
-                artistAlbumUseCase.execute(artistId,type).let {
+                artistAlbumUseCase.execute(artistId, type).let {
                     if (it.isNotEmpty()) {
                         _artistAlbumState.value = it.map(artistAlbumDomainMapper::toPresentation)
-                    }else {
+                    } else {
                         _artistAlbumState.value = emptyList()
                     }
                     _loading.postValue(false)

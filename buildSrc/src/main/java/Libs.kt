@@ -1,4 +1,3 @@
-
 object Libs {
     private val v = BuildDepVersions
 
@@ -46,7 +45,7 @@ object Libs {
 
     //-----------------------------------------------------------------------------------------------------
     //RETROFIT
-    const val RETROFIT =  "com.squareup.retrofit2:retrofit:2.9.0"
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
     const val RETROFIT_CONVERTER_GSON = "com.squareup.retrofit2:converter-gson:2.9.0"
 
     //-----------------------------------------------------------------------------------------------------
@@ -66,7 +65,6 @@ object Libs {
     const val HILT_COMPOSE_NAV = "androidx.hilt:hilt-navigation-compose:${v.HILT_COMPOSE}"
 
 
-
     //-----------------------------------------------------------------------------------------------------
     //ROOM DATABASE
     const val ROOM = "androidx.room:room-runtime:2.4.3"
@@ -83,14 +81,15 @@ object Libs {
     const val COMPOSE_PREVIEW = "androidx.compose.ui:ui-tooling-preview:${v.COMPOSE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${v.COMPOSE_ACTIVITY}"
     const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:${v.COMPOSE}"
-    const val COMPOSE_NAV_ANIM = "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
+    const val COMPOSE_NAV_ANIM =
+        "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
 
 
     //-----------------------------------------------------------------------------------------------------
     //KOTLIN COROUTINES
     const val COROUTINES_CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${v.COROUTINES}"
-    const val COROUTINES_ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${v.COROUTINES}"
-
+    const val COROUTINES_ANDROID =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${v.COROUTINES}"
 
 
 }

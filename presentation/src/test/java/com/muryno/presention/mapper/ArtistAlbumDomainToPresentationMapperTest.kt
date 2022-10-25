@@ -1,11 +1,8 @@
 package com.muryno.presention.mapper
 
 
-
 import com.muryno.domain.model.ArtistAlbumDomainModel
-import com.muryno.domain.model.ArtistDomainModel
 import com.muryno.presention.model.ArtistAlbumModel
-import com.muryno.presention.model.ArtistModel
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test

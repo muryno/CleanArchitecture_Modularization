@@ -58,7 +58,7 @@ class ArtistFragment : Fragment() {
 
         searchButton.setOnClickListener {
             closeSoftKeyboard()
-            viewModel.artistQuery(artistName =  musicSearch.text.toString())
+            viewModel.artistQuery(artistName = musicSearch.text.toString())
         }
 
         viewModel.artistState.observe(viewLifecycleOwner) {
@@ -91,7 +91,7 @@ class ArtistFragment : Fragment() {
 
         }
         adapter.clickedArtist = {
-           val action = ArtistFragmentDirections.actionArtistFragmentToArtistDetailsFragment(it)
+            val action = ArtistFragmentDirections.actionArtistFragmentToArtistDetailsFragment(it)
             view.findNavController().navigate(action)
         }
     }

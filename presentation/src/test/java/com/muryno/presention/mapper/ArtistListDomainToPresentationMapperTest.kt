@@ -1,7 +1,6 @@
 package com.muryno.presention.mapper
 
 
-
 import com.muryno.domain.model.ArtistDomainModel
 import com.muryno.presention.model.ArtistModel
 import junit.framework.TestCase.assertEquals

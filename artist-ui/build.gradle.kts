@@ -3,7 +3,7 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
     id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.DAGGER_HILT)
-    id (BuildPlugins.NAV_GRAPH)
+    id(BuildPlugins.NAV_GRAPH)
 }
 
 android {
@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         minSdk = BuildAndroidConfig.MIN_SDK_VERSION
-        targetSdk =BuildAndroidConfig.TARGET_SDK_VERSION
+        targetSdk = BuildAndroidConfig.TARGET_SDK_VERSION
         multiDexEnabled = true
 
     }
@@ -25,7 +25,7 @@ android {
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility =  JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -68,7 +68,6 @@ dependencies {
     //HILT----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
     kapt(Libs.HILT_COMPILER)
-
 
 
 }

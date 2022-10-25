@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFrag"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/homeFrag">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/top_bar"
@@ -24,8 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="cursive"
-            android:textColor="@color/black"
             android:text="Artist"
+            android:textColor="@color/black"
             android:textSize="34sp" />
 
 
@@ -33,16 +31,16 @@
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="1.4"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1.4">
 
             <EditText
                 android:id="@+id/music_search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/artist_name"
                 android:foregroundTint="@color/white"
+                android:hint="@string/artist_name"
                 android:padding="20dp" />
 
             <Button
@@ -66,8 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_bar"
-        app:spanCount="1"
-        />
+        app:spanCount="1" />
 
     <ProgressBar
         android:id="@+id/artist_progressbar"
@@ -89,8 +86,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

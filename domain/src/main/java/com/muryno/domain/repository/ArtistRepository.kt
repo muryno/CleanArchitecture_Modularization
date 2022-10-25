@@ -7,5 +7,5 @@ import com.muryno.domain.model.ArtistDomainModel
 interface ArtistRepository {
     suspend fun artistList(artistName: String): List<ArtistDomainModel>
 
-    suspend fun artistAlbum(artistId: String,type: String): List<ArtistAlbumDomainModel>
+    suspend fun artistAlbum(artistId: String, type: String): List<ArtistAlbumDomainModel>
 }

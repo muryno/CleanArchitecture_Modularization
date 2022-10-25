@@ -28,11 +28,12 @@ private val aristAlbumApiModelOutputResult = AristAlbumApiModel(
     albumReleaseGroupApiModels = emptyList(),
     releaseGroupOffset = 3,
 
-)
+    )
 
 const val artistName = "Khalid"
 const val artistId = "2"
 const val typeId = "3"
+
 @RunWith(MockitoJUnitRunner::class)
 class ArtistRemoteDataSourceImplTest {
 
@@ -52,34 +53,38 @@ class ArtistRemoteDataSourceImplTest {
     }
 
     @Test
-    fun `given expectedResult When getArtistListFromApi Then return expected result`() = runBlocking {
+    fun `given expectedResult When getArtistListFromApi Then return expected result`() =
+        runBlocking {
 
-        val expectedResult = artistListApiModelOutputResult
-        // given
-        given(
-            musicApiService.fetchArtistFromServer(artistName = artistName)
-        ).willReturn(expectedResult)
+            val expectedResult = artistListApiModelOutputResult
+            // given
+            given(
+                musicApiService.fetchArtistFromServer(artistName = artistName)
+            ).willReturn(expectedResult)
 
-        // When
-        val actualNavigationCommand = classUnderTest.getArtistListFromApi(artistName = artistName)
+            // When
+            val actualNavigationCommand =
+                classUnderTest.getArtistListFromApi(artistName = artistName)
 
-        // Then
-        assertEquals(expectedResult, actualNavigationCommand)
-    }
+            // Then
+            assertEquals(expectedResult, actualNavigationCommand)
+        }
 
     @Test
-    fun `given expectedResult When fetchArtistAlbumFromServer Then return expected result`() = runBlocking {
+    fun `given expectedResult When fetchArtistAlbumFromServer Then return expected result`() =
+        runBlocking {
 
-        val expectedResult = aristAlbumApiModelOutputResult
-        // given
-        given(
-            musicApiService.fetchArtistAlbumFromServer(artistId = artistId,type = typeId)
-        ).willReturn(expectedResult)
+            val expectedResult = aristAlbumApiModelOutputResult
+            // given
+            given(
+                musicApiService.fetchArtistAlbumFromServer(artistId = artistId, type = typeId)
+            ).willReturn(expectedResult)
 
-        // When
-        val actualNavigationCommand = classUnderTest.getArtistAlbumFromServer(artistId = artistId, type = typeId)
+            // When
+            val actualNavigationCommand =
+                classUnderTest.getArtistAlbumFromServer(artistId = artistId, type = typeId)
 
-        // Then
-        assertEquals(expectedResult, actualNavigationCommand)
-    }
+            // Then
+            assertEquals(expectedResult, actualNavigationCommand)
+        }
 }

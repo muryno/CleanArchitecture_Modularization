@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
-        app:title="back"
+        android:layout_height="wrap_content"
         app:logo="@drawable/ic_backs"
-        android:layout_height="wrap_content">
-    </androidx.appcompat.widget.Toolbar>
+        app:title="back"></androidx.appcompat.widget.Toolbar>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,16 +23,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/artist_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginVertical="10dp"
-                android:textSize="16sp"
                 android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="10dp"
                 android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:textSize="16sp"
                 tools:text="asd" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,54 +43,57 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_weight="0.5"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:scaleType="fitXY"
-                        android:tint="@color/purple_200"
                         android:layout_marginBottom="10dp"
+                        android:scaleType="fitXY"
                         android:src="@drawable/ic_artist"
-                        />
+                        android:tint="@color/purple_200" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:text="@string/artist" />
+                        android:text="@string/artist"
+                        android:textSize="13sp" />
+
                     <TextView
                         android:id="@+id/artist_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="30dp"
-                        android:textSize="15sp"
                         android:fontFamily="sans-serif-black"
+                        android:textSize="15sp"
                         tools:text="wixkid" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_weight="0.5"
                     android:gravity="center"
                     android:orientation="vertical">
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:scaleType="fitXY"
                         android:layout_marginBottom="10dp"
-                        android:tint="@color/purple_200"
+                        android:scaleType="fitXY"
                         android:src="@drawable/ic_city"
-                        />
+                        android:tint="@color/purple_200" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:text="@string/city" />
+                        android:text="@string/city"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:id="@+id/artist_city_txt"
@@ -100,33 +104,36 @@
                         android:text="Uk"
                         android:textSize="15sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_weight="0.5"
                     android:gravity="center"
                     android:orientation="vertical">
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:scaleType="fitXY"
                         android:layout_marginBottom="10dp"
-                        android:tint="@color/purple_200"
+                        android:scaleType="fitXY"
                         android:src="@drawable/ic_age"
-                        />
+                        android:tint="@color/purple_200" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:text="@string/score" />
+                        android:text="@string/score"
+                        android:textSize="13sp" />
+
                     <TextView
                         android:id="@+id/score_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="30dp"
-                        android:textSize="15sp"
                         android:fontFamily="sans-serif-black"
+                        android:textSize="15sp"
                         tools:text="24" />
                 </LinearLayout>
             </LinearLayout>
@@ -143,8 +150,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/top_bar"
-                app:spanCount="1"
-                />
+                app:spanCount="1" />
 
             <ProgressBar
                 android:id="@+id/artist__details_progressbar"
@@ -165,8 +171,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

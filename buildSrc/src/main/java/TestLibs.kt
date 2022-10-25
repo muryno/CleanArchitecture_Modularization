@@ -1,4 +1,3 @@
-
 object TestLibs {
     private val v = BuildDepVersions
 
@@ -7,7 +6,7 @@ object TestLibs {
     const val CORE_TEST = "androidx.arch.core:core-testing:2.1.0"
     const val MOCKITO_INLINE = "org.mockito:mockito-inline:4.5.1"
     const val MOKITO_KOTLIN = "org.mockito.kotlin:mockito-kotlin:4.0.0"
-    const val MOCKK  = "io.mockk:mockk:1.12.4"
+    const val MOCKK = "io.mockk:mockk:1.12.4"
     const val IOMOCKK_ANDROID = "io.mockk:mockk-android:1.12.4"
     const val TEST_RUNNER = "androidx.test:runner:1.4.0"
     const val TEST_RUNNER_EXT = "androidx.test.ext:junit:1.1.3"
@@ -34,7 +33,6 @@ object TestLibs {
 
     //DEBUG -----------------------------------------------------------------------------------------
     const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling:${v.COMPOSE}"
-
 
 
 }

@@ -11,7 +11,7 @@ class ArtistApiDataToDomainMapper :
     override fun map(input: ArtistApiModel): ArtistDomainModel {
         return ArtistDomainModel(
             id = input.id,
-            name = input.name ?: "" ,
+            name = input.name ?: "",
             gender = input.gender ?: "",
             type = input.area?.sort_name ?: "",
             state = input.area?.name ?: "",

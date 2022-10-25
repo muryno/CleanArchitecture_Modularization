@@ -5,6 +5,7 @@ import javax.inject.Inject
 
 
 class ArtistUseCase @Inject constructor(
-    private val artistRepository: ArtistRepository) {
-    suspend fun execute(artistName: String) =  artistRepository.artistList(artistName)
+    private val artistRepository: ArtistRepository
+) {
+    suspend fun execute(artistName: String) = artistRepository.artistList(artistName)
 }
