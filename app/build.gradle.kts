@@ -26,15 +26,23 @@ dependencies {
     implementation(project(BuildModules.DOMAIN))
     implementation(project(BuildModules.DATA))
     implementation(project(BuildModules.ARTIST))
+
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.Core)
+    implementation(Libs.RecyclerView)
+    implementation(Libs.constraintlayout)
+    implementation(Libs.fragment)
+    implementation(Libs.MaterialDesign)
+    implementation(Libs.AppCompat)
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
     implementation(Libs.GSON)
     implementation(Libs.RETROFIT_CONVERTER_GSON)
     implementation(Libs.OKHTTP)
+    implementation(Libs.OKHTTP_LOGGING)
     implementation(Libs.OKHTTP_urlconnection)
+
 
     //COROUTINES  ----------------------------------------------------------------------------------------
     implementation(Libs.COROUTINES_CORE)
@@ -47,35 +55,6 @@ dependencies {
     //HILT----------------------------------------------------------------------------------------
     implementation(Libs.HILT)
     kapt(Libs.HILT_COMPILER)
-
-
-    //TESTING
-    testImplementation(TestLibs.JUNIT)
-    testImplementation(TestLibs.CORE_TEST)
-    testImplementation(TestLibs.MOCKITO_INLINE)
-    testImplementation(TestLibs.MOKITO_KOTLIN)
-    testImplementation(TestLibs.MOCKK)
-    testImplementation(TestLibs.IOMOCKK_ANDROID)
-    testImplementation(TestLibs.IOMOCKK_ANDROID)
-    testImplementation(TestLibs.TEST_RUNNER)
-    testImplementation(TestLibs.TEST_RUNNER_EXT)
-    testImplementation(TestLibs.TEST_RUNNER_ANDROID)
-    testImplementation(TestLibs.EXPRESSO_TEST)
-    testImplementation(TestLibs.TEST_RULE)
-
-    testImplementation(TestLibs.MOCKWEBSERVER)
-    testImplementation(TestLibs.kOTLINX_COUROUTINE)
-    testImplementation(TestLibs.kOTLINX_COUROUTINE_TEST)
-    kaptAndroidTest(TestLibs.HILT_ANDROID_COMPILER)
-
-    //ANDROID TEST-----------------------------------------------------------------------------------------
-
-    androidTestImplementation(TestLibs.JUNIT_ANDROID)
-    androidTestImplementation(TestLibs.TEST_RUNNER_ANDROID)
-    androidTestImplementation(TestLibs.kOTLINX_COUROUTINE_ANDROID)
-    androidTestImplementation(TestLibs.CoreTesting_ANDROID)
-    androidTestImplementation(TestLibs.Hilt_ANDROID)
-    androidTestImplementation(TestLibs.Truth_ANDROID)
 
 
 }

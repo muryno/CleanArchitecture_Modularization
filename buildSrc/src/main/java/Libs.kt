@@ -27,7 +27,6 @@ object Libs {
     const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
     const val fragment = "androidx.fragment:fragment-ktx:1.5.3"
 
-
     //GOOGLE Material design
     //-----------------------------------------------------------------------------------------------------
     const val MaterialDesign = "com.google.android.material:material:1.6.1"
