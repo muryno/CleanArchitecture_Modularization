@@ -32,7 +32,6 @@ private val aristAlbumApiModelOutputResult = AristAlbumApiModel(
 
 const val artistName = "Khalid"
 const val artistId = "2"
-const val typeId = "3"
 
 @RunWith(MockitoJUnitRunner::class)
 class ArtistRemoteDataSourceImplTest {
@@ -77,12 +76,12 @@ class ArtistRemoteDataSourceImplTest {
             val expectedResult = aristAlbumApiModelOutputResult
             // given
             given(
-                musicApiService.fetchArtistAlbumFromServer(artistId = artistId, type = typeId)
+                musicApiService.fetchArtistAlbumFromServer(artistId = artistId)
             ).willReturn(expectedResult)
 
             // When
             val actualNavigationCommand =
-                classUnderTest.getArtistAlbumFromServer(artistId = artistId, type = typeId)
+                classUnderTest.getArtistAlbumFromServer(artistId = artistId)
 
             // Then
             assertEquals(expectedResult, actualNavigationCommand)

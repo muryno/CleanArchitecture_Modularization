@@ -28,12 +28,11 @@ class ArtistAlbumViewModel @Inject constructor(
     private val _errorState: MutableLiveData<Boolean> = MutableLiveData()
     val errorState: LiveData<Boolean> = _errorState
 
-    private val album = "album"
 
-    fun artistAlbumQuery(artistId: String, type: String = album) {
+    fun artistAlbumQuery(artistId: String) {
         viewModelScope.launch {
             try {
-                artistAlbumUseCase.execute(artistId, type).let {
+                artistAlbumUseCase.execute(artistId).let {
                     if (it.isNotEmpty()) {
                         _artistAlbumState.value = it.map(artistAlbumDomainMapper::toPresentation)
                     } else {

@@ -157,7 +157,7 @@ class ArtistRepositoryImplTest {
         //given
 
         given(
-            artistRemoteDataSource.getArtistAlbumFromServer(artistId = artistId, type = "")
+            artistRemoteDataSource.getArtistAlbumFromServer(artistId = artistId)
         ).willReturn(aristAlbumApiModel)
 
         given(
@@ -166,7 +166,7 @@ class ArtistRepositoryImplTest {
 
 
         // When
-        val actualCommand = classUnderTest.artistAlbum(artistId = artistId, type = "")
+        val actualCommand = classUnderTest.artistAlbum(artistId = artistId)
 
         // Then
         assertEquals(expectedResult, actualCommand)

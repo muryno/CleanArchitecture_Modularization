@@ -75,7 +75,7 @@ class ArtistAlbumViewModelTest {
 
             // Given
             given(
-                artistAlbumUseCase.execute(artistId = artistID, type = "")
+                artistAlbumUseCase.execute(artistId = artistID)
             ).willReturn(
                 artistAlbumDomainModelExpectedResult
             )
@@ -86,7 +86,7 @@ class ArtistAlbumViewModelTest {
                 artistAlbumPresentationModel
             )
 
-            classUnderTest.artistAlbumQuery(artistId = artistID, type = "")
+            classUnderTest.artistAlbumQuery(artistId = artistID)
 
             val actualResult = classUnderTest.artistAlbumState.getOrAwaitValue()
 

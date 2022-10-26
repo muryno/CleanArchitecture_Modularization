@@ -26,11 +26,10 @@ class ArtistRepositoryImpl(
         }
 
 
-    override suspend fun artistAlbum(artistId: String, type: String): List<ArtistAlbumDomainModel> =
+    override suspend fun artistAlbum(artistId: String): List<ArtistAlbumDomainModel> =
         withContext(coroutine.io) {
             artistRemoteDataSource.getArtistAlbumFromServer(
-                artistId,
-                type
+                artistId
             ).albumReleaseGroupApiModels.map(artistAlbumApiDataToDomainMapper::toDomain)
         }
 

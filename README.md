@@ -32,7 +32,7 @@ Below is the image of the architecture used
 
 
 ### Modularization
-- Data module: handle talking to server and providing data source
+- Data module: handle communicating with server and providing data source
 - Domain module: handle business logic
 - Presentation module: contain viewmodel to communicate with domain usecase
 - artist module: for artist view and adapter

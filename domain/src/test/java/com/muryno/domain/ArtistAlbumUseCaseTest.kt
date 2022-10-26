@@ -50,13 +50,13 @@ class ArtistAlbumUseCaseTest {
             val expectedResult = arrayListOf(artistDomainModel)
             // Given
             given(
-                artistRepository.artistAlbum(artistId = artistId, type = "")
+                artistRepository.artistAlbum(artistId = artistId)
             ).willReturn(
                 expectedResult
             )
 
             // When
-            val actualResult = classUnderTest.execute(artistId = artistId, type = "")
+            val actualResult = classUnderTest.execute(artistId = artistId)
 
             // Then
             assertEquals(expectedResult, actualResult)

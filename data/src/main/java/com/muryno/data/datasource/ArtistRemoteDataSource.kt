@@ -6,5 +6,5 @@ import com.muryno.data.model.album.AristAlbumApiModel
 
 interface ArtistRemoteDataSource {
     suspend fun getArtistListFromApi(artistName: String): ArtistListApiModel
-    suspend fun getArtistAlbumFromServer(artistId: String, type: String): AristAlbumApiModel
+    suspend fun getArtistAlbumFromServer(artistId: String): AristAlbumApiModel
 }
