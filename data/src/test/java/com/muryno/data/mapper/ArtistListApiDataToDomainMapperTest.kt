@@ -17,7 +17,7 @@ val artistModelInput = ArtistApiModel(
         id = "123",
         life_span = null,
         name = "artist",
-        sort_name = "sort",
+        sort_name = "wizzy",
         type = "wizzy",
         type_id = "234"
     ),
