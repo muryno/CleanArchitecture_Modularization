@@ -14,61 +14,61 @@ import org.mockito.junit.MockitoJUnit
 
 @RunWith(Parameterized::class)
 class ArtistAlbumApiToResponseDataMapperTest(
-    private val givenArtistAlbum: AlbumReleaseGroupApiModel,
-    private val expectedArtistAlbum: ArtistAlbumDataModel
+        private val givenArtistAlbum: AlbumReleaseGroupApiModel,
+        private val expectedArtistAlbum: ArtistAlbumDataModel
 ) {
     companion object {
         @JvmStatic
         @Parameters
-        fun data(): Collection<Array<*>> = listOf(
-            testCase(
-                primaryType = "321",
-                firstReleaseDate = "Sunday Special",
-                disambiguation = "What's so special about it?",
-                title = "Chop Chop",
-                id = "1"
-            ),
-            testCase(
-                primaryType = "123",
-                firstReleaseDate = "Night Delight",
-                disambiguation = "Delightful.",
-                title = "Al Akel",
-                id = "2"
-            )
-        )
+        fun data(): Collection<Array<*>> =
+                listOf(
+                        testCase(
+                                primaryType = "321",
+                                firstReleaseDate = "Sunday Special",
+                                disambiguation = "What's so special about it?",
+                                title = "Chop Chop",
+                                id = "1"
+                        ),
+                        testCase(
+                                primaryType = "123",
+                                firstReleaseDate = "Night Delight",
+                                disambiguation = "Delightful.",
+                                title = "Al Akel",
+                                id = "2"
+                        )
+                )
 
         private fun testCase(
-            primaryType: String,
-            firstReleaseDate: String,
-            disambiguation: String,
-            title: String,
-            id: String
-        ) = arrayOf(
-            AlbumReleaseGroupApiModel(
-                disambiguation = disambiguation,
-                firstReleaseDate = firstReleaseDate,
-                id = id,
-                primaryType = primaryType,
-                primaryTypeId =  "",
-                secondaryTypeIds = emptyList(),
-                secondaryTypes =  emptyList(),
-                title =  title
-            ),
-            ArtistAlbumDataModel(
-                id = id,
-                title =  title,
-                releaseDate = firstReleaseDate,
-                disambiguation = disambiguation,
-                primaryType = primaryType
-            )
-        )
+                primaryType: String,
+                firstReleaseDate: String,
+                disambiguation: String,
+                title: String,
+                id: String
+        ) =
+                arrayOf(
+                        AlbumReleaseGroupApiModel(
+                                disambiguation = disambiguation,
+                                firstReleaseDate = firstReleaseDate,
+                                id = id,
+                                primaryType = primaryType,
+                                primaryTypeId = "",
+                                secondaryTypeIds = emptyList(),
+                                secondaryTypes = emptyList(),
+                                title = title
+                        ),
+                        ArtistAlbumDataModel(
+                                id = id,
+                                title = title,
+                                releaseDate = firstReleaseDate,
+                                disambiguation = disambiguation,
+                                primaryType = primaryType
+                        )
+                )
     }
 
-    @get:Rule
-    val mockitoRule: MethodRule = MockitoJUnit.rule()
+    @get:Rule val mockitoRule: MethodRule = MockitoJUnit.rule()
 
     private lateinit var classUnderTest: ArtistAlbumApiToResponseDataMapper
-
 
     @Before
     fun setUp() {
