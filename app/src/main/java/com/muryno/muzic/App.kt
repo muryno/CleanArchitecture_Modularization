@@ -5,14 +5,4 @@ import dagger.hilt.android.HiltAndroidApp
 
 
 @HiltAndroidApp
-open class App : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        instance = this
-    }
-
-    companion object {
-        var instance: App? = null
-            private set
-    }
-}
+class App : Application()
