@@ -38,7 +38,9 @@ Below is the image of the architecture used
 - artist module: for artist view and adapter
 - app module for app entry point and dependency inject module
 
-This approach help to build scalable, maintainable and robust application with software good practice(SOLID ,DRY,KISS, design patterm) in place
+### Best practice
+* [Coroutine best practice](https://developer.android.com/kotlin/coroutines/coroutines-best-practices)
+* This approach help to build scalable, maintainable and robust application with software good practice(SOLID ,DRY,KISS, design pattern) in place
 
 
 Here is the app screen

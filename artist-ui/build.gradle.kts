@@ -1,9 +1,9 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
-    id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.NAV_GRAPH)
+    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {

@@ -5,15 +5,15 @@ object BuildModules {
     const val CORE_ANDROID = ":core-android"
 
     //data
-    const val DATA = ":data"
-    const val DATA_ANDROID = ":data-android"
+    const val DATA = ":artist-data"
+    const val DATA_SOURCE = ":artist-datasource"
 
     //domain
-    const val DOMAIN = ":domain"
+    const val DOMAIN = ":artist-domain"
 
 
     //domain
-    const val PRESENTATION = ":presentation"
+    const val PRESENTATION = ":artist-presentation"
 
     //artist
     const val ARTIST = ":artist-ui"

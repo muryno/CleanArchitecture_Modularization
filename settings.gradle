@@ -26,7 +26,8 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Muzic"
 include ':app'
-include ':data'
-include ':domain'
-include ':presentation'
+include ':artist-data'
+include ':artist-domain'
+include ':artist-presentation'
 include ':artist-ui'
+include ':artist-datasource'
