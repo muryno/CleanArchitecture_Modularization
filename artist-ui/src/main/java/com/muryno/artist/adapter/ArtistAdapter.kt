@@ -9,26 +9,26 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
-import com.muryno.presention.model.ArtistModel
+import com.muryno.presention.artist.model.ArtistPresentationModel
 import javax.inject.Inject
 
 
 class ArtistAdapter @Inject constructor() :
     RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
 
-    lateinit var clickedArtist: (ArtistModel) -> Unit
+    lateinit var clickedArtist: (ArtistPresentationModel) -> Unit
 
-    private val callback = object : DiffUtil.ItemCallback<ArtistModel>() {
+    private val callback = object : DiffUtil.ItemCallback<ArtistPresentationModel>() {
         override fun areItemsTheSame(
-            oldItemNews: ArtistModel,
-            newItemNews: ArtistModel
+            oldItemNews: ArtistPresentationModel,
+            newItemNews: ArtistPresentationModel
         ): Boolean {
             return oldItemNews.id == newItemNews.id
         }
 
         override fun areContentsTheSame(
-            oldItemNews: ArtistModel,
-            newItemNews: ArtistModel
+            oldItemNews: ArtistPresentationModel,
+            newItemNews: ArtistPresentationModel
         ): Boolean {
             return oldItemNews == newItemNews
         }
@@ -58,7 +58,7 @@ class ArtistAdapter @Inject constructor() :
     }
 
 
-    class MyViewHolder(itemView: View, val clickedArtist: (ArtistModel) -> Unit) :
+    class MyViewHolder(itemView: View, val clickedArtist: (ArtistPresentationModel) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
 
         private val txtName: TextView = itemView.findViewById(R.id.txt_name)
@@ -68,7 +68,7 @@ class ArtistAdapter @Inject constructor() :
             itemView.findViewById(R.id.txt_description_label)
 
         @SuppressLint("SetTextI18n")
-        fun bind(item: ArtistModel) {
+        fun bind(item: ArtistPresentationModel) {
             txtName.text = item.name
             txtCity.text = item.city
             txtGender.text = item.gender

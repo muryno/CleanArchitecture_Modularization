@@ -15,7 +15,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
 import com.muryno.artist.adapter.ArtistAdapter
-import com.muryno.presention.viewmodel.ArtistViewModel
+import com.muryno.presention.artist.viewmodel.ArtistViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

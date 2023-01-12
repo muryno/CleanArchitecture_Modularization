@@ -9,24 +9,24 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
-import com.muryno.presention.model.ArtistAlbumModel
+import com.muryno.presention.artistAlbulm.model.ArtistAlbumPresentationModel
 import javax.inject.Inject
 
 
 class ArtistAlbumAdapter @Inject constructor() :
     RecyclerView.Adapter<ArtistAlbumAdapter.MyViewHolder>() {
 
-    private val callback = object : DiffUtil.ItemCallback<ArtistAlbumModel>() {
+    private val callback = object : DiffUtil.ItemCallback<ArtistAlbumPresentationModel>() {
         override fun areItemsTheSame(
-            oldItemNews: ArtistAlbumModel,
-            newItemNews: ArtistAlbumModel
+            oldItemNews: ArtistAlbumPresentationModel,
+            newItemNews: ArtistAlbumPresentationModel
         ): Boolean {
             return oldItemNews.id == newItemNews.id
         }
 
         override fun areContentsTheSame(
-            oldItemNews: ArtistAlbumModel,
-            newItemNews: ArtistAlbumModel
+            oldItemNews: ArtistAlbumPresentationModel,
+            newItemNews: ArtistAlbumPresentationModel
         ): Boolean {
             return oldItemNews == newItemNews
         }
@@ -65,7 +65,7 @@ class ArtistAlbumAdapter @Inject constructor() :
         private val txtDescriptionLabel: TextView = itemView.findViewById(R.id.txt_about_label)
 
         @SuppressLint("SetTextI18n")
-        fun bind(item: ArtistAlbumModel) {
+        fun bind(item: ArtistAlbumPresentationModel) {
             txtName.text = item.title
             txtReleaseDate.text = item.releaseDate
             txtGender.text = item.primaryType

@@ -4,9 +4,9 @@ package com.muryno.data.repository
 import com.muryno.data.datasource.ArtistDataSource
 import com.muryno.data.mapper.ArtistAlbumDataToDomainMapper
 import com.muryno.data.mapper.ArtistDataToDomainMapper
-import com.muryno.domain.model.ArtistAlbumDomainModel
-import com.muryno.domain.model.ArtistDomainModel
-import com.muryno.domain.repository.ArtistRepository
+import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
+import com.muryno.domain.artist.model.ArtistDomainModel
+import com.muryno.domain.artist.repository.ArtistRepository
 
 
 class ArtistLiveRepository(

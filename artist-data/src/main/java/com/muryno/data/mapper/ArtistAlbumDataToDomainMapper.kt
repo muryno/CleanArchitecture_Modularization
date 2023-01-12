@@ -2,7 +2,7 @@ package com.muryno.data.mapper
 
 
 import com.muryno.data.model.ArtistAlbumDataModel
-import com.muryno.domain.model.ArtistAlbumDomainModel
+import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
 
 class ArtistAlbumDataToDomainMapper {
     fun toDomain(input: ArtistAlbumDataModel): ArtistAlbumDomainModel {

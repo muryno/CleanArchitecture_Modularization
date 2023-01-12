@@ -1,7 +1,7 @@
 package com.muryno.data.mapper
 
 import com.muryno.data.model.ArtistDataModel
-import com.muryno.domain.model.ArtistDomainModel
+import com.muryno.domain.artist.model.ArtistDomainModel
 import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Rule

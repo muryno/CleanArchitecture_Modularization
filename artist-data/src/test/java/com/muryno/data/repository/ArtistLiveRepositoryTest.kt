@@ -6,8 +6,8 @@ import com.muryno.data.mapper.ArtistAlbumDataToDomainMapper
 import com.muryno.data.mapper.ArtistDataToDomainMapper
 import com.muryno.data.model.ArtistAlbumDataModel
 import com.muryno.data.model.ArtistDataModel
-import com.muryno.domain.model.ArtistAlbumDomainModel
-import com.muryno.domain.model.ArtistDomainModel
+import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
+import com.muryno.domain.artist.model.ArtistDomainModel
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before

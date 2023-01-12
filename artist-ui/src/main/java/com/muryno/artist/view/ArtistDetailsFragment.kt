@@ -13,8 +13,8 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
 import com.muryno.artist.adapter.ArtistAlbumAdapter
-import com.muryno.presention.model.ArtistModel
-import com.muryno.presention.viewmodel.ArtistAlbumViewModel
+import com.muryno.presention.artist.model.ArtistPresentationModel
+import com.muryno.presention.artistAlbulm.viewmodel.ArtistAlbumViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -94,12 +94,12 @@ class ArtistDetailsFragment : Fragment() {
 
     }
 
-    private fun view(artistModel: ArtistModel) {
-        artistNameTextView.text = artistModel.name
-        artistCityTextView.text = artistModel.city
-        scoreTextView.text = artistModel.score.toString()
-        artistDescription.text = artistModel.description
-        viewModel.artistAlbumQuery(artistId = artistModel.id)
+    private fun view(artistPresentationModel: ArtistPresentationModel) {
+        artistNameTextView.text = artistPresentationModel.name
+        artistCityTextView.text = artistPresentationModel.city
+        scoreTextView.text = artistPresentationModel.score.toString()
+        artistDescription.text = artistPresentationModel.description
+        viewModel.artistAlbumQuery(artistId = artistPresentationModel.id)
     }
 }
 
