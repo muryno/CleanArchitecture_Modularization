@@ -8,6 +8,7 @@ import com.muryno.presention.artist.mapper.ArtistDomainToPresentationMapper
 import com.muryno.presention.artist.model.ArtistPresentationModel
 import com.muryno.presention.artist.model.ArtistViewState
 import com.muryno.presention.viewmodel.givenUseCaseSuccess
+import com.muryno.presention.viewmodel.observeViewStateForever
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
@@ -68,10 +69,10 @@ class ArtistViewModelTest {
 
 
     @Test
-    fun `Given dish ID when onEntered then presents loading, dish details`() {
+    fun `Given restaurantId, dishes when onEntered then presents loading, dish list`() {
         // Given
-
-         val artistName = "wizzy"
+        val restaurantId = "REST007"
+        val artistName = "wizzy"
         val dishId = "dishId"
 
         val name = "Spaghetti Pomadoro"
@@ -80,57 +81,65 @@ class ArtistViewModelTest {
         val state = "artist"
         val type = "type"
         val gender = "male"
-        val domainDish = arrayListOf(
-            ArtistDomainModel(
-                id = dishId,
-                name = name,
-                disambiguation = disambiguation,
-                type = type,
-                state = state,
-                score = score,
-                gender = gender
 
-            )
+        val givenDish1 = ArtistDomainModel(
+            id = dishId,
+            name = name,
+            disambiguation = disambiguation,
+            type = type,
+            state = state,
+            score = score,
+            gender = gender
         )
-        useCaseExecutor.givenUseCaseSuccess(
-            useCase = getArtistUseCase,
-            input = dishId,
-            output = domainDish
-        )
-
-        val presentationDish = arrayListOf(
-            ArtistPresentationModel(
-                id = dishId,
-                name = name,
-                description = disambiguation,
-                city = type,
-                state = state,
-                score = score,
-                gender = gender
-            )
+        val givenDish2 = ArtistDomainModel(
+            id = dishId,
+            name = name,
+            disambiguation = disambiguation,
+            type = type,
+            state = state,
+            score = score,
+            gender = gender
         )
 
-        given(
-            artistDomainMapper
-                .toPresentation(domainDish.first())
-        ).willReturn(presentationDish.first())
+        val givenDishes = arrayListOf(givenDish1, givenDish2)
 
-        val actualViewStates = mutableListOf<ArtistViewState>()
-        classUnderTest.viewState.observeForever(actualViewStates::add)
-        actualViewStates.clear()
+        val expectedDish1 =  ArtistPresentationModel(
+            id = dishId,
+            name = name,
+            description = disambiguation,
+            city = type,
+            state = state,
+            score = score,
+            gender = gender
+        )
+        given(artistDomainMapper.toPresentation(givenDish1)).willReturn(expectedDish1)
+        val expectedDish2 = ArtistPresentationModel(
+            id = dishId,
+            name = name,
+            description = disambiguation,
+            city = type,
+            state = state,
+            score = score,
+            gender = gender
+        )
+        given(artistDomainMapper.toPresentation(givenDish2)).willReturn(expectedDish2)
+        val expectedDishes = listOf(expectedDish1, expectedDish2)
+
+        useCaseExecutor.givenUseCaseSuccess(getArtistUseCase, restaurantId, givenDishes)
 
         val expectedViewStates = listOf(
             ArtistViewState(isLoading = true),
-            ArtistViewState(
-                isLoading = false,
-                artist = presentationDish
-            )
+            ArtistViewState(artist = expectedDishes)
         )
 
+        val actualViewStates = classUnderTest.observeViewStateForever()
+        actualViewStates.clear()
+
         // When
-        classUnderTest.fetchArtist(artistName)
+        classUnderTest.onEntered(restaurantId)
 
         // Then
         assertEquals(expectedViewStates, actualViewStates)
     }
+
 }

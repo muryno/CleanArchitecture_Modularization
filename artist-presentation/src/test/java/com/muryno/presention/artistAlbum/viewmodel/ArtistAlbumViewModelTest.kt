@@ -4,12 +4,12 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
 import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCase
 import com.muryno.domain.cleanarchitecture.usecase.UseCaseExecutor
-import com.muryno.presention.artist.model.ArtistViewState
 import com.muryno.presention.artistAlbulm.mapper.ArtistAlbumDomainToPresentationMapper
 import com.muryno.presention.artistAlbulm.model.ArtistAlbumPresentationModel
 import com.muryno.presention.artistAlbulm.model.ArtistAlbumViewState
 import com.muryno.presention.artistAlbulm.viewmodel.ArtistAlbumViewModel
 import com.muryno.presention.viewmodel.givenUseCaseSuccess
+import com.muryno.presention.viewmodel.observeViewStateForever
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
@@ -66,11 +66,10 @@ class ArtistAlbumViewModelTest {
         assertEquals(expectedViewStates, actualViewStates)
     }
 
-
     @Test
-    fun `Given dish ID when onEntered then presents loading, dish details`() {
+    fun `Given restaurantId, dishes when onEntered then presents loading, dish list`() {
         // Given
-
+        val restaurantId = "REST007"
         val artistName = "wizzy"
         val dishId = "dishId"
 
@@ -80,52 +79,58 @@ class ArtistAlbumViewModelTest {
         val state = "artist"
         val type = "type"
         val gender = "male"
-        val domainDish = arrayListOf(
-            ArtistAlbumDomainModel(
-                id = dishId,
-                title = name,
-                disambiguation = disambiguation,
-                primaryType = type,
-                releaseDate = state
-            )
-        )
-        useCaseExecutor.givenUseCaseSuccess(
-            useCase = getArtistAlbumUseCase,
-            input = dishId,
-            output = domainDish
-        )
 
-        val presentationDish = arrayListOf(
-            ArtistAlbumPresentationModel(
-                id = dishId,
-                title = name,
-                disambiguation = disambiguation,
-                primaryType = type,
-                releaseDate = state
-            )
+        val givenDish1 =  ArtistAlbumDomainModel(
+            id = dishId,
+            title = name,
+            disambiguation = disambiguation,
+            primaryType = type,
+            releaseDate = state
+        )
+        val givenDish2 =  ArtistAlbumDomainModel(
+            id = dishId,
+            title = name,
+            disambiguation = disambiguation,
+            primaryType = type,
+            releaseDate = state
         )
 
-        given(
-            artistAlbumDomainMapper
-                .toPresentation(domainDish.first())
-        ).willReturn(presentationDish.first())
+        val givenDishes = arrayListOf(givenDish1, givenDish2)
 
-        val actualViewStates = mutableListOf<ArtistAlbumViewState>()
-        classUnderTest.viewState.observeForever(actualViewStates::add)
-        actualViewStates.clear()
+        val expectedDish1 =    ArtistAlbumPresentationModel(
+            id = dishId,
+            title = name,
+            disambiguation = disambiguation,
+            primaryType = type,
+            releaseDate = state
+        )
+        given(artistAlbumDomainMapper.toPresentation(givenDish1)).willReturn(expectedDish1)
+        val expectedDish2 =   ArtistAlbumPresentationModel(
+            id = dishId,
+            title = name,
+            disambiguation = disambiguation,
+            primaryType = type,
+            releaseDate = state
+        )
+        given(artistAlbumDomainMapper.toPresentation(givenDish2)).willReturn(expectedDish2)
+        val expectedDishes = listOf(expectedDish1, expectedDish2)
+
+        useCaseExecutor.givenUseCaseSuccess(getArtistAlbumUseCase, restaurantId, givenDishes)
 
         val expectedViewStates = listOf(
             ArtistAlbumViewState(isLoading = true),
-            ArtistAlbumViewState(
-                isLoading = false,
-                artistAlbum = presentationDish
-            )
+            ArtistAlbumViewState(artistAlbum = expectedDishes)
         )
 
+        val actualViewStates = classUnderTest.observeViewStateForever()
+        actualViewStates.clear()
+
         // When
-        classUnderTest.fetchArtistAlbum(artistName)
+        classUnderTest.fetchArtistAlbum(restaurantId)
 
         // Then
         assertEquals(expectedViewStates, actualViewStates)
     }
+
+
 }

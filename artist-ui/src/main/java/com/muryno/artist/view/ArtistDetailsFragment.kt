@@ -21,28 +21,28 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class ArtistDetailsFragment : Fragment() {
 
-    @Inject
-    lateinit var adapter: ArtistAlbumAdapter
-
-    private val viewModel by viewModels<ArtistAlbumViewModel>()
-
-    private val args: ArtistDetailsFragmentArgs by navArgs()
-
-    private val recyclerView: RecyclerView get() = requireView().findViewById(R.id.artist_details_recyclerView)
-
-    private val progressbar: ProgressBar get() = requireView().findViewById(R.id.artist__details_progressbar)
-
-    private val emptyState: View get() = requireView().findViewById(R.id.empty_state)
-
-    private val backBtn: View get() = requireView().findViewById(R.id.back_btn)
-
-    private val artistNameTextView: TextView get() = requireView().findViewById(R.id.artist_name)
-
-    private val artistCityTextView: TextView get() = requireView().findViewById(R.id.artist_city_txt)
-
-    private val scoreTextView: TextView get() = requireView().findViewById(R.id.score_txt)
-
-    private val artistDescription: TextView get() = requireView().findViewById(R.id.artist_description)
+//    @Inject
+//    lateinit var adapter: ArtistAlbumAdapter
+//
+//    private val viewModel by viewModels<ArtistAlbumViewModel>()
+//
+//    private val args: ArtistDetailsFragmentArgs by navArgs()
+//
+//    private val recyclerView: RecyclerView get() = requireView().findViewById(R.id.artist_details_recyclerView)
+//
+//    private val progressbar: ProgressBar get() = requireView().findViewById(R.id.artist__details_progressbar)
+//
+//    private val emptyState: View get() = requireView().findViewById(R.id.empty_state)
+//
+//    private val backBtn: View get() = requireView().findViewById(R.id.back_btn)
+//
+//    private val artistNameTextView: TextView get() = requireView().findViewById(R.id.artist_name)
+//
+//    private val artistCityTextView: TextView get() = requireView().findViewById(R.id.artist_city_txt)
+//
+//    private val scoreTextView: TextView get() = requireView().findViewById(R.id.score_txt)
+//
+//    private val artistDescription: TextView get() = requireView().findViewById(R.id.artist_description)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,51 +55,51 @@ class ArtistDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView.adapter = adapter
+        //recyclerView.adapter = adapter
+//
+//        viewModel.artistAlbumState.observe(viewLifecycleOwner) {
+//            if (it.isNotEmpty()) {
+//                adapter.differ.submitList(it)
+//                emptyState.visibility = View.GONE
+//            }
+//        }
 
-        viewModel.artistAlbumState.observe(viewLifecycleOwner) {
-            if (it.isNotEmpty()) {
-                adapter.differ.submitList(it)
-                emptyState.visibility = View.GONE
-            }
-        }
+//        viewModel.errorState.observe(viewLifecycleOwner) {
+//            if (it) {
+//                emptyState.visibility = View.VISIBLE
+//
+//            } else {
+//                emptyState.visibility = View.GONE
+//            }
+//        }
+//
+//        viewModel.isLoading.observe(viewLifecycleOwner) {
+//            if (it) {
+//                emptyState.visibility = View.GONE
+//                progressbar.visibility = View.VISIBLE
+//                recyclerView.visibility = View.INVISIBLE
+//            } else {
+//                progressbar.visibility = View.GONE
+//                recyclerView.visibility = View.VISIBLE
+//
+//            }
+//        }
 
-        viewModel.errorState.observe(viewLifecycleOwner) {
-            if (it) {
-                emptyState.visibility = View.VISIBLE
+       // view(args.artistModel)
 
-            } else {
-                emptyState.visibility = View.GONE
-            }
-        }
-
-        viewModel.isLoading.observe(viewLifecycleOwner) {
-            if (it) {
-                emptyState.visibility = View.GONE
-                progressbar.visibility = View.VISIBLE
-                recyclerView.visibility = View.INVISIBLE
-            } else {
-                progressbar.visibility = View.GONE
-                recyclerView.visibility = View.VISIBLE
-
-            }
-        }
-
-        view(args.artistModel)
-
-        backBtn.setOnClickListener {
-            val nav = ArtistDetailsFragmentDirections.actionArtistDetailsFragmentToArtistFragment()
-            view.findNavController().navigate(nav)
-        }
+//        backBtn.setOnClickListener {
+//            val nav = ArtistDetailsFragmentDirections.actionArtistDetailsFragmentToArtistFragment()
+//            view.findNavController().navigate(nav)
+//        }
 
     }
 
     private fun view(artistPresentationModel: ArtistPresentationModel) {
-        artistNameTextView.text = artistPresentationModel.name
-        artistCityTextView.text = artistPresentationModel.city
-        scoreTextView.text = artistPresentationModel.score.toString()
-        artistDescription.text = artistPresentationModel.description
-        viewModel.artistAlbumQuery(artistId = artistPresentationModel.id)
+//        artistNameTextView.text = artistPresentationModel.name
+//        artistCityTextView.text = artistPresentationModel.city
+//        scoreTextView.text = artistPresentationModel.score.toString()
+//        artistDescription.text = artistPresentationModel.description
+       // viewModel.artistAlbumQuery(artistId = artistPresentationModel.id)
     }
 }
 

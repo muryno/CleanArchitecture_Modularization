@@ -6,9 +6,6 @@ import com.muryno.artist_datasource.datasource.ArtistRemoteDataSource
 import com.muryno.artist_datasource.mapper.ArtistAlbumApiToResponseDataMapper
 import com.muryno.artist_datasource.mapper.ArtistApiToResponseDataMapper
 import com.muryno.data.datasource.ArtistDataSource
-import com.muryno.data.mapper.ArtistAlbumDataToDomainMapper
-import com.muryno.data.mapper.ArtistDataToDomainMapper
-import com.muryno.data.repository.ArtistLiveRepository
 import com.muryno.muzic.utils.NetworkConnectionInterceptor
 import dagger.Module
 import dagger.Provides

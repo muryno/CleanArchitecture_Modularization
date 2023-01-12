@@ -1,4 +1,4 @@
-package com.muryno.artist.adapter
+package com.muryno.artist.artist.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,26 +9,25 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
-import com.muryno.presention.artist.model.ArtistPresentationModel
-import javax.inject.Inject
+import com.muryno.artist.artist.model.ArtistUIModel
 
 
-class ArtistAdapter @Inject constructor() :
+class ArtistAdapter:
     RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
 
-    lateinit var clickedArtist: (ArtistPresentationModel) -> Unit
+    lateinit var clickedArtist: (ArtistUIModel) -> Unit
 
-    private val callback = object : DiffUtil.ItemCallback<ArtistPresentationModel>() {
+    private val callback = object : DiffUtil.ItemCallback<ArtistUIModel>() {
         override fun areItemsTheSame(
-            oldItemNews: ArtistPresentationModel,
-            newItemNews: ArtistPresentationModel
+            oldItemNews: ArtistUIModel,
+            newItemNews: ArtistUIModel
         ): Boolean {
             return oldItemNews.id == newItemNews.id
         }
 
         override fun areContentsTheSame(
-            oldItemNews: ArtistPresentationModel,
-            newItemNews: ArtistPresentationModel
+            oldItemNews: ArtistUIModel,
+            newItemNews: ArtistUIModel
         ): Boolean {
             return oldItemNews == newItemNews
         }
@@ -58,17 +57,16 @@ class ArtistAdapter @Inject constructor() :
     }
 
 
-    class MyViewHolder(itemView: View, val clickedArtist: (ArtistPresentationModel) -> Unit) :
+    class MyViewHolder(itemView: View, val clickedArtist: (ArtistUIModel) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
 
-        private val txtName: TextView = itemView.findViewById(R.id.txt_name)
-        private val txtCity: TextView = itemView.findViewById(R.id.txt_city)
-        private val txtGender: TextView = itemView.findViewById(R.id.txt_gender)
-        private val txtDescriptionLabel: TextView =
-            itemView.findViewById(R.id.txt_description_label)
+        private val txtName: TextView  by lazy { itemView.findViewById(R.id.txt_name) }
+        private val txtCity: TextView by lazy { itemView.findViewById(R.id.txt_city) }
+        private val txtGender: TextView by lazy { itemView.findViewById(R.id.txt_gender) }
+        private val txtDescriptionLabel: TextView by lazy { itemView.findViewById(R.id.txt_description_label) }
 
         @SuppressLint("SetTextI18n")
-        fun bind(item: ArtistPresentationModel) {
+        fun bind(item: ArtistUIModel) {
             txtName.text = item.name
             txtCity.text = item.city
             txtGender.text = item.gender

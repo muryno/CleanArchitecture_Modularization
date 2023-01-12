@@ -21,7 +21,7 @@ class ArtistViewModel @Inject constructor(
 ) {
     override fun initialState() = ArtistViewState()
 
-    fun fetchArtist(artistName: String) {
+    fun onEntered(artistName: String) {
         updateViewState(ArtistViewState::loading)
         execute(
             artistUseCase,
@@ -32,9 +32,7 @@ class ArtistViewModel @Inject constructor(
     }
 
     private fun presentDishDetails(artist: List<ArtistDomainModel>) {
-        val artistList = artist.map { artistDomainMapper
-            .toPresentation(it) }
-        updateViewState { artistReady(artistList) }
+        updateViewState { artistReady(artist.map (artistDomainMapper::toPresentation )) }
     }
 
 }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/artistFragment"
-        android:name="com.muryno.artist.view.ArtistFragment"
+        android:name="com.muryno.artist.artist.view.ArtistFragment"
         android:label="ArtistFragment"
         tools:layout="@layout/artist_fragment_home">
 
@@ -25,7 +25,7 @@
 
         <argument
             android:name="artist_model"
-            app:argType="com.muryno.presention.model.ArtistModel" />
+            app:argType="com.muryno.artist.artist.model.ArtistUIModel" />
 
         <action
             android:id="@+id/action_artistDetailsFragment_to_artistFragment"

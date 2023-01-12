@@ -1,7 +1,8 @@
-package com.muryno.muzic
+package com.muryno.artist.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.muryno.artist.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
