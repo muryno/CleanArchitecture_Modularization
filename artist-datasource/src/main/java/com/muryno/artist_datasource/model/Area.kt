@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class Area(
     val id: String,
     @SerializedName("life-span")
-    val life_span: LifeSpan?,
+    val lifeSpan: LifeSpan?,
     val name: String?,
     @SerializedName("sort-name")
     val sort_name: String,
