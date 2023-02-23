@@ -10,7 +10,7 @@ class ArtistApiToResponseDataMapper {
             id = input.id,
             name = input.name ?: "",
             gender = input.gender ?: "",
-            type = input.area?.sort_name ?: "",
+            type = input.area?.sortName ?: "",
             state = input.area?.name ?: "",
             disambiguation = input.disambiguation ?: "",
             score = input.score ?: 0
