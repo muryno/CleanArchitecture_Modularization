@@ -10,7 +10,7 @@ data class ArtistApiModel(
     val disambiguation: String?,
     val gender: String?,
     @SerializedName("gender-id")
-    val gender_id: String,
+    val genderId: String,
     val id: String,
     val ipis: List<String>,
     val isnis: List<String>,
