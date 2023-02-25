@@ -59,7 +59,7 @@ class ArtistDataSourceImplTest {
             val artistData = ArtistApiModel(
                 aliases = emptyList(),
                 area = null,
-                begin_area = null,
+                beginArea = null,
                 disambiguation = disambiguation,
                 gender = gender,
                 gender_id = "1",
