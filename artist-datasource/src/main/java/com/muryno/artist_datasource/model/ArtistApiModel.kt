@@ -15,7 +15,7 @@ data class ArtistApiModel(
     val ipis: List<String>,
     val isnis: List<String>,
     @SerializedName("life-span")
-    val life_span: LifeSpanXX?,
+    val lifeSpan: LifeSpanXX?,
     val name: String?,
     val score: Int?,
     @SerializedName("sort-name")
