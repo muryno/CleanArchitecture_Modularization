@@ -19,7 +19,7 @@ data class ArtistApiModel(
     val name: String?,
     val score: Int?,
     @SerializedName("sort-name")
-    val sort_name: String,
+    val sortName: String,
     val tags: List<Tag>,
     val type: String,
     @SerializedName("type-id")
