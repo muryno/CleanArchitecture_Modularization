@@ -51,7 +51,7 @@ class ArtistApiToResponseDataMapperTest(
                 lifeSpan = null,
                 name = title,
                 score = 20,
-                sort_name = "nambia",
+                sortName = "nambia",
                 tags = emptyList(),
                 type = "",
                 type_id = "1"
