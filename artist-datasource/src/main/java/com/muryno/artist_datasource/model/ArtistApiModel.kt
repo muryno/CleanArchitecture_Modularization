@@ -23,5 +23,5 @@ data class ArtistApiModel(
     val tags: List<Tag>,
     val type: String,
     @SerializedName("type-id")
-    val type_id: String
+    val typeId: String
 )
