@@ -54,7 +54,7 @@ class ArtistApiToResponseDataMapperTest(
                 sortName = "nambia",
                 tags = emptyList(),
                 type = "",
-                type_id = "1"
+                typeId = "1"
             ),
             ArtistDataModel(
                 id = id,
