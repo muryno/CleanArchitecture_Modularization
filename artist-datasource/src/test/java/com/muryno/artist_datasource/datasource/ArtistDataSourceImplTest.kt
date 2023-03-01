@@ -72,7 +72,7 @@ class ArtistDataSourceImplTest {
                 sortName = "nambia",
                 tags = emptyList(),
                 type = "",
-                type_id = "1"
+                typeId = "1"
             )
            val artistListApiData = ArtistListApiModel(
                 created = "",
