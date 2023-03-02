@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Aliase(
     @SerializedName("begin-date")
-    val begin_date: Any,
+    val beginDate: Any,
     @SerializedName("end-date")
     val end_date: Any,
     val locale: Any,
