@@ -11,5 +11,5 @@ data class BeginArea(
     val sortName: String,
     val type: String,
     @SerializedName("type-id")
-    val type_id: String
+    val typeId: String
 )
