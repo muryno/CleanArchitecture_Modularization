@@ -6,7 +6,7 @@ data class Aliase(
     @SerializedName("begin-date")
     val beginDate: Any,
     @SerializedName("end-date")
-    val end_date: Any,
+    val endDate: Any,
     val locale: Any,
     @SerializedName("name")
     val name: String,
