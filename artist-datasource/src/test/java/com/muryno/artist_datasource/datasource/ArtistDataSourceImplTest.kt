@@ -27,13 +27,9 @@ const val artistId = "2"
 
 @RunWith(MockitoJUnitRunner::class)
 class ArtistDataSourceImplTest {
-
-
     private lateinit var classUnderTest: ArtistRemoteDataSource
-
     @Mock
     private lateinit var musicApiService: MusicApiService
-
     @Mock
     private lateinit var artistAlbumApiToResponseDataMapper: ArtistAlbumApiToResponseDataMapper
 
