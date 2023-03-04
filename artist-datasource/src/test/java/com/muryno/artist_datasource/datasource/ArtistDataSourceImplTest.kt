@@ -32,7 +32,6 @@ class ArtistDataSourceImplTest {
     private lateinit var musicApiService: MusicApiService
     @Mock
     private lateinit var artistAlbumApiToResponseDataMapper: ArtistAlbumApiToResponseDataMapper
-
     @Mock
     private lateinit var artistApiToResponseDataMapper: ArtistApiToResponseDataMapper
 
