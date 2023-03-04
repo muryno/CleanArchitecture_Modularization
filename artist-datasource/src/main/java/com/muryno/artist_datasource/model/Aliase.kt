@@ -12,7 +12,7 @@ data class Aliase(
     val name: String,
     val primary: Any,
     @SerializedName("sort-name")
-    val sort_name: String,
+    val sortName: String,
     val type: String,
     @SerializedName("type-id")
     val type_id: String
