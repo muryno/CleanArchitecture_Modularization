@@ -6,7 +6,12 @@ plugins {
 
 android {
     namespace = "com.muryno.artist_datasource"
-    compileSdk = 32
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = BuildAndroidConfig.MIN_SDK_VERSION
+        targetSdk = BuildAndroidConfig.TARGET_SDK_VERSION
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -16,6 +21,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+
 
 dependencies {
     implementation(project(BuildModules.DATA))
