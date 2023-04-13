@@ -22,6 +22,10 @@ android {
     }
 }
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
+}
 
 dependencies {
     implementation(project(BuildModules.DATA))
