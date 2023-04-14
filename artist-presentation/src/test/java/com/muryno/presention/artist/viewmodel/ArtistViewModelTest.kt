@@ -72,7 +72,6 @@ class ArtistViewModelTest {
     fun `Given restaurantId, dishes when onEntered then presents loading, dish list`() {
         // Given
         val restaurantId = "REST007"
-        val artistName = "wizzy"
         val dishId = "dishId"
 
         val name = "Spaghetti Pomadoro"
