@@ -1,18 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
-    id 'kotlin-kapt'
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId BuildAndroidConfig.APPLICATION_ID
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -71,7 +69,6 @@ android {
     }
 }
 
-
 dependencies {
 
     implementation(project(BuildModules.PRESENTATION))
@@ -88,8 +85,7 @@ dependencies {
     implementation(Libs.fragment)
     implementation(Libs.MaterialDesign)
     implementation(Libs.AppCompat)
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
@@ -108,9 +104,6 @@ dependencies {
     kapt(Libs.ROOM_COMPILER_Kap)
     implementation(Libs.ROOMKTX)
 
-    //HILT----------------------------------------------------------------------------------------
-    implementation(Libs.HILT)
-    kapt(Libs.HILT_COMPILER)
 
 
 }
