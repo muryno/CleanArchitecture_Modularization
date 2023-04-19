@@ -7,6 +7,7 @@ plugins {
 android {
     compileSdk = BuildAndroidConfig.COMPILE_SDK_VERSION
 
+
     defaultConfig {
         minSdk = BuildAndroidConfig.MIN_SDK_VERSION
         targetSdk = BuildAndroidConfig.TARGET_SDK_VERSION
@@ -16,8 +17,19 @@ android {
     }
 
     namespace = BuildAndroidConfig.APPLICATION_DATA
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
+}
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
