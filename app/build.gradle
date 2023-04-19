@@ -91,7 +91,8 @@ dependencies {
     implementation(Libs.fragment)
     implementation(Libs.MaterialDesign)
     implementation(Libs.AppCompat)
-
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
