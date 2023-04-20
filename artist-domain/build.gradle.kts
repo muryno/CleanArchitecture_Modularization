@@ -1,7 +1,6 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
-    id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.KOTLIN_KAPT)
 }
 
@@ -16,8 +15,18 @@ android {
     }
 
     namespace = BuildAndroidConfig.APPLICATION_DOMAIN
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 
-
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
@@ -39,10 +48,6 @@ dependencies {
     implementation(Libs.ROOM)
     kapt(Libs.ROOM_COMPILER_Kap)
     implementation(Libs.ROOMKTX)
-
-    //HILT----------------------------------------------------------------------------------------
-    implementation(Libs.HILT)
-    kapt(Libs.HILT_COMPILER)
 
 
     //TESTING
