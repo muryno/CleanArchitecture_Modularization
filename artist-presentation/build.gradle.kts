@@ -1,8 +1,8 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
-    id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.KOTLIN_KAPT)
+    id(BuildPlugins.DAGGER_HILT)
 }
 
 android {
@@ -16,7 +16,18 @@ android {
     }
 
     namespace = BuildAndroidConfig.APPLICATION_PRESENTATION
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
@@ -41,9 +52,10 @@ dependencies {
     implementation(Libs.ROOMKTX)
 
     //HILT----------------------------------------------------------------------------------------
-    implementation(Libs.HILT)
-    kapt(Libs.HILT_COMPILER)
-
+//    implementation(Libs.HILT)
+//    kapt(Libs.HILT_COMPILER)
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
 
     //TESTING
     testImplementation(TestLibs.JUNIT)
