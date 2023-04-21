@@ -1,9 +1,9 @@
 plugins {
     id(BuildPlugins.ANDROID_LIBRARY)
     id(BuildPlugins.KOTLIN_ANDROID_JETBRAINS)
+    id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.NAV_GRAPH)
-    id(BuildPlugins.KOTLIN_KAPT)
 }
 
 android {
@@ -31,7 +31,9 @@ android {
         jvmTarget = "1.8"
     }
 
+
 }
+
 
 dependencies {
 
@@ -45,8 +47,6 @@ dependencies {
     implementation(Libs.MaterialDesign)
     implementation(Libs.AppCompat)
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
@@ -65,9 +65,6 @@ dependencies {
     kapt(Libs.ROOM_COMPILER_Kap)
     implementation(Libs.ROOMKTX)
 
-    //HILT----------------------------------------------------------------------------------------
-    implementation(Libs.HILT)
-    kapt(Libs.HILT_COMPILER)
 
 
 }
