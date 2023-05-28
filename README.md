@@ -5,12 +5,6 @@
 ### Architecture
 * Clean Architecture & MVVM & Moduarization
 
-Below is the image of the architecture used
-
-<img width="745" alt="Screenshot 2022-10-24 at 02 50 02" src="https://user-images.githubusercontent.com/26343440/197883565-e35a36da-811d-4891-a2e7-d5a0fcbe80db.png">
-
-
-
 
 ### Library used
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) (Jetpack)
