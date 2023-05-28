@@ -2,7 +2,7 @@ package com.muryno.presention.artistAlbum.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
-import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCase
+import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCaseExecutor
 import com.muryno.domain.cleanarchitecture.usecase.UseCaseExecutor
 import com.muryno.presention.artistAlbulm.mapper.ArtistAlbumDomainToPresentationMapper
 import com.muryno.presention.artistAlbulm.model.ArtistAlbumPresentationModel
@@ -29,7 +29,7 @@ class ArtistAlbumViewModelTest {
 
 
     @Mock
-    private lateinit var getArtistAlbumUseCase: ArtistAlbumUserUseCase
+    private lateinit var getArtistAlbumUseCase: ArtistAlbumUserUseCaseExecutor
 
 
     @Mock

@@ -2,7 +2,7 @@ package com.muryno.domain
 
 import com.muryno.domain.artist.model.ArtistDomainModel
 import com.muryno.domain.artist.repository.ArtistRepository
-import com.muryno.domain.artist.usecase.ArtistUseCase
+import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
 import com.muryno.domain.cleanarchitecture.coroutine.CoroutineContextProvider
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
@@ -29,7 +29,7 @@ const val artistName = "Wizkid"
 class ArtistUseCaseTest {
 
 
-    private lateinit var classUnderTest: ArtistUseCase
+    private lateinit var classUnderTest: ArtistUseCaseExecutor
 
     @Mock
     private lateinit var coroutineContextProvider: CoroutineContextProvider
@@ -40,7 +40,7 @@ class ArtistUseCaseTest {
     @Before
     fun setup() {
 
-        classUnderTest = ArtistUseCase(
+        classUnderTest = ArtistUseCaseExecutor(
             artistRepository = artistRepository,
             coroutineContextProvider
         )

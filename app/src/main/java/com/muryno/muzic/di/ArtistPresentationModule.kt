@@ -1,8 +1,8 @@
 package com.muryno.muzic.di
 
 import com.muryno.domain.artist.repository.ArtistRepository
-import com.muryno.domain.artist.usecase.ArtistUseCase
-import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCase
+import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
+import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCaseExecutor
 import com.muryno.domain.cleanarchitecture.coroutine.CoroutineContextProvider
 import com.muryno.presention.artist.mapper.ArtistDomainToPresentationMapper
 import com.muryno.presention.artistAlbulm.mapper.ArtistAlbumDomainToPresentationMapper
@@ -27,7 +27,7 @@ class ArtistPresentationModule {
     fun providesArtistUseCase(
         artistRepository: ArtistRepository,
         coroutineContextProvider: CoroutineContextProvider
-    ) = ArtistUseCase(
+    ) = ArtistUseCaseExecutor(
         artistRepository,
         coroutineContextProvider
     )
@@ -36,7 +36,7 @@ class ArtistPresentationModule {
     fun providesArtistAlbumUserUseCase (
         artistRepository: ArtistRepository,
         coroutineContextProvider: CoroutineContextProvider
-    ) = ArtistAlbumUserUseCase(
+    ) = ArtistAlbumUserUseCaseExecutor(
         artistRepository,
         coroutineContextProvider
     )

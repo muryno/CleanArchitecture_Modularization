@@ -1,7 +1,7 @@
 package com.muryno.presention.artist.viewmodel
 
 import com.muryno.domain.artist.model.ArtistDomainModel
-import com.muryno.domain.artist.usecase.ArtistUseCase
+import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
 import com.muryno.presention.architecture.viewmodel.BaseViewModel
 import com.muryno.presention.architecture.viewmodel.usecase.UseCaseExecutorProvider
 import com.muryno.presention.artist.mapper.ArtistDomainToPresentationMapper
@@ -13,7 +13,7 @@ private typealias DoNothing = Unit
 
 @HiltViewModel
 class ArtistViewModel @Inject constructor(
-    private val artistUseCase: ArtistUseCase,
+    private val artistUseCase: ArtistUseCaseExecutor,
     private val artistDomainMapper: ArtistDomainToPresentationMapper,
     useCaseExecutorProvider: UseCaseExecutorProvider
 ) : BaseViewModel<ArtistViewState>(

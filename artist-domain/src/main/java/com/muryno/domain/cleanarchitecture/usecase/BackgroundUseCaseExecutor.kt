@@ -3,7 +3,7 @@ package com.muryno.domain.cleanarchitecture.usecase
 import com.muryno.domain.cleanarchitecture.coroutine.CoroutineContextProvider
 import kotlinx.coroutines.withContext
 
-abstract class BackgroundExecutingUseCase<REQUEST, RESULT>(
+abstract class BackgroundUseCaseExecutor<REQUEST, RESULT>(
     private val coroutineContextProvider: CoroutineContextProvider
 ) : UseCase<REQUEST, RESULT> {
     final override suspend fun execute(

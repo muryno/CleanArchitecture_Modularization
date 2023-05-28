@@ -1,7 +1,7 @@
 package com.muryno.presention.artistAlbulm.viewmodel
 
 import com.muryno.domain.artistAlbulm.model.ArtistAlbumDomainModel
-import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCase
+import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCaseExecutor
 import com.muryno.presention.architecture.viewmodel.BaseViewModel
 import com.muryno.presention.architecture.viewmodel.usecase.UseCaseExecutorProvider
 import com.muryno.presention.artistAlbulm.mapper.ArtistAlbumDomainToPresentationMapper
@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ArtistAlbumViewModel @Inject constructor(
-    private val artistAlbumUseCase: ArtistAlbumUserUseCase,
+    private val artistAlbumUseCase: ArtistAlbumUserUseCaseExecutor,
     private val artistAlbumDomainMapper: ArtistAlbumDomainToPresentationMapper,
     useCaseExecutorProvider: UseCaseExecutorProvider
 ) : BaseViewModel<ArtistAlbumViewState>(

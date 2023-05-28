@@ -2,7 +2,7 @@ package com.muryno.presention.artist.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.muryno.domain.artist.model.ArtistDomainModel
-import com.muryno.domain.artist.usecase.ArtistUseCase
+import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
 import com.muryno.domain.cleanarchitecture.usecase.UseCaseExecutor
 import com.muryno.presention.artist.mapper.ArtistDomainToPresentationMapper
 import com.muryno.presention.artist.model.ArtistPresentationModel
@@ -35,7 +35,7 @@ class ArtistViewModelTest {
     private lateinit var classUnderTest: ArtistViewModel
 
     @Mock
-    private lateinit var getArtistUseCase: ArtistUseCase
+    private lateinit var getArtistUseCase: ArtistUseCaseExecutor
 
     @Mock
     private lateinit var artistDomainMapper: ArtistDomainToPresentationMapper
