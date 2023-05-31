@@ -13,24 +13,11 @@
 
         <action
             android:id="@+id/action_artistFragment_to_artistDetailsFragment"
-            app:destination="@id/artistDetailsFragment" />
+            />
 
     </fragment>
 
-    <fragment
-        android:id="@+id/artistDetailsFragment"
-        android:name="com.muryno.artist.view.ArtistDetailsFragment"
-        android:label="ArtistDetailsFragment"
-        tools:layout="@layout/artist_fragment_details">
 
-        <argument
-            android:name="artist_model"
-            app:argType="com.muryno.artist.artist.model.ArtistUIModel" />
-
-        <action
-            android:id="@+id/action_artistDetailsFragment_to_artistFragment"
-            app:destination="@id/artistFragment" />
-    </fragment>
 
 </navigation>
 

@@ -10,7 +10,6 @@ import com.muryno.artist.R
 import com.muryno.artist.artist.adapter.ArtistAdapter
 import com.muryno.artist.artist.mapper.ArtistPresentationToUIMapper
 import com.muryno.artist.base.BaseFragment
-import com.muryno.artist.navigation.mapper.DestinationPresentationToUiMapper
 import com.muryno.presention.artist.model.ArtistViewState
 import com.muryno.presention.artist.viewmodel.ArtistViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,7 +22,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
 
 
 
-    override lateinit var destinationMapper: DestinationPresentationToUiMapper
 
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper

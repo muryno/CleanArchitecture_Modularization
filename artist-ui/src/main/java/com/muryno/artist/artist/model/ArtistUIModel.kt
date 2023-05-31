@@ -11,4 +11,4 @@ data class ArtistUIModel(
     val state: String,
     val description: String,
     val score: Int
-) : Serializable
+)
