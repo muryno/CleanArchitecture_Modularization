@@ -1,19 +1,15 @@
 package com.muryno.artist.artist.view
 
-import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
-import com.muryno.artist.architecture.mapper.ViewStateBinder
-import com.muryno.artist.architecture.view.BaseFragment
-import com.muryno.artist.architecture.view.ViewsProvider
-import com.muryno.artist.artist.binder.ArtistViewStateBinder
-import com.muryno.artist.artist.model.ArtistUIModel
+import com.muryno.artist.artist.adapter.ArtistAdapter
+import com.muryno.artist.artist.mapper.ArtistPresentationToUIMapper
+import com.muryno.artist.base.BaseFragment
 import com.muryno.artist.navigation.mapper.DestinationPresentationToUiMapper
 import com.muryno.presention.artist.model.ArtistViewState
 import com.muryno.presention.artist.viewmodel.ArtistViewModel
@@ -21,8 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class ArtistFragment : BaseFragment<ArtistViewState>(),
-    ArtistViewsProvider, ArtistViewStateBinder.OnClickListener{
+class ArtistFragment : BaseFragment<ArtistViewState>(){
 
     override val viewModel: ArtistViewModel by viewModels()
 
@@ -31,14 +26,14 @@ class ArtistFragment : BaseFragment<ArtistViewState>(),
     override lateinit var destinationMapper: DestinationPresentationToUiMapper
 
     @Inject
-    @JvmSuppressWildcards
-    override lateinit var viewStateBinder: ViewStateBinder<ArtistViewState, ViewsProvider>
+    lateinit var artistToUiMapper: ArtistPresentationToUIMapper
+
     override val layoutResourceId = R.layout.artist_fragment_home
-    override lateinit var artistListView: RecyclerView
-    override lateinit var progressBar: ProgressBar
-    override lateinit var searchButton: Button
-    override lateinit var musicSearch: EditText
-    override lateinit var emptyState: View
+     lateinit var artistListView: RecyclerView
+     lateinit var progressBar: ProgressBar
+     lateinit var searchButton: Button
+     lateinit var musicSearch: EditText
+     lateinit var emptyState: View
 
     override fun View.bindViews() {
         artistListView = findViewById(R.id.artist_recyclerView)
@@ -50,22 +45,41 @@ class ArtistFragment : BaseFragment<ArtistViewState>(),
 
     private val artist = "London"
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (savedInstanceState == null) {
-            viewModel.onEntered(artist)
+    private val artistAdapter by lazy {
+        ArtistAdapter().apply {
+            clickedArtist = {
+                closeSoftKeyboard()
+                viewModel.onEntered(artistName = musicSearch.text.toString())
+            }
         }
     }
 
-    override fun onArtistClick(artist: ArtistUIModel) {
-        val action = ArtistFragmentDirections.actionArtistFragmentToArtistDetailsFragment(artist)
-        view?.findNavController()?.navigate(action)
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.viewState.observe(viewLifecycleOwner){viewState->
+            if (artistListView.adapter == null) {
+                artistListView.adapter = artistAdapter
+            }
+
+            if (viewState.isLoading) {
+                emptyState.visibility = View.GONE
+                progressBar.visibility = View.VISIBLE
+                artistListView.visibility = View.INVISIBLE
+            } else {
+                progressBar.visibility = View.GONE
+                artistListView.visibility = View.VISIBLE
+                artistAdapter.differ.submitList(viewState.artist?.map(artistToUiMapper::toUi))
+            }
+
+            searchButton.setOnClickListener {
+                closeSoftKeyboard()
+                viewModel.onEntered(artistName = musicSearch.text.toString())
+            }
+
+        }
+        viewModel.onEntered(artist)
     }
 
-    override fun onArtistButtonClick() {
-        closeSoftKeyboard()
-        viewModel.onEntered(artistName = musicSearch.text.toString())
-    }
 
 }

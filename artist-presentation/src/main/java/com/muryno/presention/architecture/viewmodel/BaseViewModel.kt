@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.muryno.domain.cleanarchitecture.exception.DomainException
 import com.muryno.domain.cleanarchitecture.usecase.UseCase
 import com.muryno.presention.architecture.model.PresentationDestination
-import com.muryno.presention.architecture.viewmodel.livedata.SingleLiveEvent
+import com.muryno.presention.architecture.viewmodel.livedata.SingleEvent
 import com.muryno.presention.architecture.viewmodel.usecase.UseCaseExecutorProvider
 
 abstract class BaseViewModel<VIEW_STATE : Any>(
@@ -15,10 +15,12 @@ abstract class BaseViewModel<VIEW_STATE : Any>(
 ) : ViewModel() {
     private val _viewState = MutableLiveData<VIEW_STATE>()
         .apply { value = initialState() }
-    val viewState = _viewState.asLiveData()
+    val viewState = _viewState.toLiveData()
 
-    private val _destination = SingleLiveEvent<PresentationDestination>()
-    val destination = _destination.asLiveData()
+    private val _destination = SingleEvent<PresentationDestination>()
+    val destination = _destination.toLiveData()
+
+    private fun <T> LiveData<T>.toLiveData() = this
 
     protected abstract fun initialState(): VIEW_STATE
 
@@ -27,14 +29,6 @@ abstract class BaseViewModel<VIEW_STATE : Any>(
 
     private val useCaseExecutor by lazy {
         useCaseExecutorProvider(viewModelScope)
-    }
-
-    protected fun <OUTPUT> execute(
-        useCase: UseCase<Unit, OUTPUT>,
-        onSuccess: (OUTPUT) -> Unit = {},
-        onException: (DomainException) -> Unit = {}
-    ) {
-        execute(useCase, Unit, onSuccess, onException)
     }
 
     protected fun <INPUT, OUTPUT> execute(
@@ -55,13 +49,7 @@ abstract class BaseViewModel<VIEW_STATE : Any>(
     ) = updateViewState(currentViewState.updatedState())
 
 
-    protected fun navigateTo(destination: PresentationDestination) {
-        _destination.value = destination
-    }
 
-    protected fun navigateBack() {
-        _destination.value = PresentationDestination.Back
-    }
 
-    private fun <T> LiveData<T>.asLiveData() = this
+
 }

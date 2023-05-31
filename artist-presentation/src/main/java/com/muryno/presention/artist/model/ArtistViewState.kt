@@ -4,9 +4,9 @@ data class ArtistViewState(
     val isLoading: Boolean = false,
     val artist: List<ArtistPresentationModel>? = null
 ) {
-    fun loading() = copy(isLoading = true)
+    fun isLoading() = copy(isLoading = true)
 
-    fun artistReady(
+    fun isArtistReady(
         artist: List<ArtistPresentationModel>
     ) = copy(artist = artist, isLoading = false)
 }

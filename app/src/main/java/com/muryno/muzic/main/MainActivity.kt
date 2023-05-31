@@ -1,4 +1,4 @@
-package com.muryno.artist.main
+package com.muryno.muzic.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

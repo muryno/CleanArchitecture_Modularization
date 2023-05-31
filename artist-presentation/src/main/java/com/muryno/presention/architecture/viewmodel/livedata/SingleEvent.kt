@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 private const val TAG = "SingleLiveEvent"
 
-class SingleLiveEvent<T> : MutableLiveData<T>() {
+class SingleEvent<T> : MutableLiveData<T>() {
     private val pending = AtomicBoolean(false)
 
     @MainThread

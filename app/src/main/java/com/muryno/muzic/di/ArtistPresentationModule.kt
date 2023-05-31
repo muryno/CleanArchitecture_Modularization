@@ -5,7 +5,6 @@ import com.muryno.domain.artist.usecase.ArtistUseCaseExecutor
 import com.muryno.domain.artistAlbulm.usecase.ArtistAlbumUserUseCaseExecutor
 import com.muryno.domain.cleanarchitecture.coroutine.CoroutineContextProvider
 import com.muryno.presention.artist.mapper.ArtistDomainToPresentationMapper
-import com.muryno.presention.artistAlbulm.mapper.ArtistAlbumDomainToPresentationMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,9 +18,7 @@ class ArtistPresentationModule {
     fun providesArtistDomainToPresentationMapper() =
         ArtistDomainToPresentationMapper()
 
-    @Provides
-    fun providesArtistAlbumDomainToPresentationMapper() =
-        ArtistAlbumDomainToPresentationMapper()
+
 
     @Provides
     fun providesArtistUseCase(
