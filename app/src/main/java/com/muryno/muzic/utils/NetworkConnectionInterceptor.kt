@@ -21,7 +21,6 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         }
 
     }
-
     @RequiresApi(Build.VERSION_CODES.M)
     private fun isNetworkAvailable(): Int {
         var result = 0 // Returns connection type. 0: none; 1: mobile data; 2: wifi
