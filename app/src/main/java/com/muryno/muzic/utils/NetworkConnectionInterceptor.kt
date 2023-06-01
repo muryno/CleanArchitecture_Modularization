@@ -9,7 +9,6 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 class NetworkConnectionInterceptor(context: Context) : Interceptor {
-
     private val applicationContext: Context = context.applicationContext;
 
     @RequiresApi(Build.VERSION_CODES.M)
