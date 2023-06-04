@@ -16,9 +16,7 @@ android {
         multiDexEnabled = true
 
     }
-
     namespace = BuildAndroidConfig.APPLICATION_ARTIST_UI
-
     buildFeatures {
         viewBinding = true
         compose = true
