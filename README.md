@@ -1,9 +1,20 @@
-# Artist App
+# Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing
 
+
+
+- [Medium Post: Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2)
 
 
 ### Architecture
-* Clean Architecture & MVVM & Moduarization
+* Clean Architecture & MVVM & Moduarization & Unit Testing
+
+## Project Structure
+* artist-domain
+* artist-data
+* artist-datasource
+* artist-presentation
+* artist-ui
+* app
 
 
 ### Library used
@@ -13,31 +24,18 @@
 * [Retrofit2](https://square.github.io/retrofit/)
 * [coroutine](https://developer.android.com/kotlin/coroutines)
 * [UNIT TEST](https://developer.android.com/training/testing/unit-testing)
-* [Navigation graph](https://developer.android.com/guide/navigation/navigation-getting-started)
+*  [Coroutine best practice](https://developer.android.com/kotlin/coroutines/coroutines-best-practices)
+
+
+
 
 
 ### Features
 - search for list of artist.. default is drake as he is my favorite
-- click on artist to fetch artist album
 - dark mode supported
-- Unit testing
-- git log to track progress
 
 
-
-### Modularization
-- Data module: handle communicating with server and providing data source
-- Domain module: handle business logic
-- Presentation module: contain viewmodel to communicate with domain usecase
-- artist module: for artist view and adapter
-- app module for app entry point and dependency inject module
-
-### Best practice
-* [Coroutine best practice](https://developer.android.com/kotlin/coroutines/coroutines-best-practices)
-* This approach help to build scalable, maintainable and robust application with software good practice(SOLID ,DRY,KISS, design pattern) in place
-
-
-Here is the app screen
+### Screen
 
 <img width="336" alt="Screenshot 2022-10-25 at 22 43 48" src="https://user-images.githubusercontent.com/26343440/197887992-51323194-0dcb-48e6-ae93-e570633aa807.png">
 
