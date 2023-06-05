@@ -1,20 +1,22 @@
-### Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing
+## Practical Guide to Building Android Apps with Clean Architecture, Modularization and Unit Testing
 
 
-
-- [Medium Post: Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2)
-
-
-### Architecture
+### Architecture and Structure
 * Clean Architecture & MVVM & Moduarization & Unit Testing
 
-## Project Structure
+## Project Modules
 * artist-domain
 * artist-data
 * artist-datasource
 * artist-presentation
 * artist-ui
 * app
+
+
+
+- [Medium Post: Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2)
+
+
 
 
 ### Library used
