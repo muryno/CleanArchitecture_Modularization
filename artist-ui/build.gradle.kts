@@ -17,6 +17,7 @@ android {
 
     }
     namespace = BuildAndroidConfig.APPLICATION_ARTIST_UI
+
     buildFeatures {
         viewBinding = true
         compose = true
@@ -28,6 +29,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
 
 dependencies {
