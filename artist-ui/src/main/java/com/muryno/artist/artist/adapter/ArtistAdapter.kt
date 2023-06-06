@@ -22,7 +22,6 @@ class ArtistAdapter:
         ): Boolean {
             return oldItemNews.id == newItemNews.id
         }
-
         override fun areContentsTheSame(
             oldItemNews: ArtistUIModel,
             newItemNews: ArtistUIModel
