@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.muryno.artist.R
 import com.muryno.artist.artist.model.ArtistUIModel
-
-
 class ArtistAdapter:
     RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
     lateinit var clickedArtist: (ArtistUIModel) -> Unit
@@ -30,7 +28,6 @@ class ArtistAdapter:
         }
     }
     var differ = AsyncListDiffer(this, callback)
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
