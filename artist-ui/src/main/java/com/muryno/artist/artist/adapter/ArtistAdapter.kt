@@ -28,9 +28,7 @@ class ArtistAdapter:
         ): Boolean {
             return oldItemNews == newItemNews
         }
-
     }
-
     var differ = AsyncListDiffer(this, callback)
 
 
