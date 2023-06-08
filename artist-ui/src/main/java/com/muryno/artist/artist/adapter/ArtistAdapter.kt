@@ -28,7 +28,6 @@ class ArtistAdapter:
         }
     }
     var differ = AsyncListDiffer(this, callback)
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val bindingView: View = layoutInflater.inflate(
@@ -38,7 +37,6 @@ class ArtistAdapter:
         )
         return MyViewHolder(bindingView, clickedArtist)
     }
-
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
