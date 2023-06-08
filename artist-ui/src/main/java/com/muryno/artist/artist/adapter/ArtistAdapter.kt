@@ -40,7 +40,6 @@ class ArtistAdapter:
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
-
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val trendingGithubUserItem = differ.currentList[position]
         holder.bind(trendingGithubUserItem)
