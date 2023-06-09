@@ -44,8 +44,6 @@ class ArtistAdapter:
         val trendingGithubUserItem = differ.currentList[position]
         holder.bind(trendingGithubUserItem)
     }
-
-
     class MyViewHolder(itemView: View, val clickedArtist: (ArtistUIModel) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
 
