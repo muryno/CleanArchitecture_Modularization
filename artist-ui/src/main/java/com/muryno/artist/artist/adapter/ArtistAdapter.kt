@@ -46,7 +46,6 @@ class ArtistAdapter:
     }
     class MyViewHolder(itemView: View, val clickedArtist: (ArtistUIModel) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
-
         private val txtName: TextView  by lazy { itemView.findViewById(R.id.txt_name) }
         private val txtCity: TextView by lazy { itemView.findViewById(R.id.txt_city) }
         private val txtGender: TextView by lazy { itemView.findViewById(R.id.txt_gender) }
