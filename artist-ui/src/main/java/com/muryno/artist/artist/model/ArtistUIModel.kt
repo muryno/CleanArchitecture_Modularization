@@ -1,6 +1,6 @@
 package com.muryno.artist.artist.model
 
-import java.io.Serializable
+
 
 
 data class ArtistUIModel(
