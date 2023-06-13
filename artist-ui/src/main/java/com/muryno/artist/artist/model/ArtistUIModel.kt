@@ -1,6 +1,5 @@
 package com.muryno.artist.artist.model
 
-
 data class ArtistUIModel(
     val id: String,
     val name: String,
