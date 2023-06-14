@@ -22,7 +22,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
 
 
 
-
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
 
