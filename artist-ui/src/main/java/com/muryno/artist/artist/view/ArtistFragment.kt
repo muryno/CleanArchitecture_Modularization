@@ -20,10 +20,8 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
 
     override val viewModel: ArtistViewModel by viewModels()
 
-
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
-
     override val layoutResourceId = R.layout.artist_fragment_home
      lateinit var artistListView: RecyclerView
      lateinit var progressBar: ProgressBar
