@@ -19,7 +19,6 @@ import javax.inject.Inject
 class ArtistFragment : BaseFragment<ArtistViewState>(){
 
     override val viewModel: ArtistViewModel by viewModels()
-
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
     override val layoutResourceId = R.layout.artist_fragment_home
