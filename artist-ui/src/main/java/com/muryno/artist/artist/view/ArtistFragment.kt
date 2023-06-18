@@ -36,7 +36,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     }
 
     private val artist = "London"
-
     private val artistAdapter by lazy {
         ArtistAdapter().apply {
             clickedArtist = {
