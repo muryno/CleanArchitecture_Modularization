@@ -60,7 +60,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
                 artistListView.visibility = View.VISIBLE
                 artistAdapter.differ.submitList(viewState.artist?.map(artistToUiMapper::toUi))
             }
-
             searchButton.setOnClickListener {
                 closeSoftKeyboard()
                 viewModel.onEntered(artistName = musicSearch.text.toString())
