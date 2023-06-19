@@ -45,7 +45,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
         }
     }
 
-
     override fun onResume() {
         super.onResume()
         viewModel.viewState.observe(viewLifecycleOwner){viewState->
