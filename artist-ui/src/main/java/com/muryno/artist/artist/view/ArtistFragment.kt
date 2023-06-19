@@ -51,7 +51,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
             if (artistListView.adapter == null) {
                 artistListView.adapter = artistAdapter
             }
-
             if (viewState.isLoading) {
                 emptyState.visibility = View.GONE
                 progressBar.visibility = View.VISIBLE
