@@ -69,5 +69,4 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
         viewModel.onEntered(artist)
     }
 
-
 }
