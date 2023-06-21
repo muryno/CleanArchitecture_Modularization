@@ -17,7 +17,6 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class ArtistFragment : BaseFragment<ArtistViewState>(){
-
     override val viewModel: ArtistViewModel by viewModels()
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
