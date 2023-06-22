@@ -33,7 +33,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
         musicSearch = findViewById(R.id.music_search)
         emptyState = findViewById(R.id.empty_state)
     }
-    private val artist = "germany"
+    private val artist = "London"
     private val artistAdapter by lazy {
         ArtistAdapter().apply {
             clickedArtist = {
