@@ -33,8 +33,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
         musicSearch = findViewById(R.id.music_search)
         emptyState = findViewById(R.id.empty_state)
     }
-
-    private val artist = "London"
+    private val artist = "germany"
     private val artistAdapter by lazy {
         ArtistAdapter().apply {
             clickedArtist = {
@@ -62,7 +61,6 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
                 closeSoftKeyboard()
                 viewModel.onEntered(artistName = musicSearch.text.toString())
             }
-
         }
         viewModel.onEntered(artist)
     }
