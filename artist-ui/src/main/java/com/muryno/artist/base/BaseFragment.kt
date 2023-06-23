@@ -31,7 +31,6 @@ abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
         } else {
             null
         }
-
         return view
     }
 
