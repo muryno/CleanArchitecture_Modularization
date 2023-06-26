@@ -30,7 +30,6 @@ abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
     abstract fun View.bindViews()
 
 
-
     protected fun closeSoftKeyboard() {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view?.windowToken, 0)
