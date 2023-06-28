@@ -9,7 +9,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
 import com.muryno.presention.architecture.viewmodel.BaseViewModel
-
 private const val NO_LAYOUT_RESOURCE = 0
 abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
     protected abstract val viewModel: BaseViewModel<VIEW_STATE>
