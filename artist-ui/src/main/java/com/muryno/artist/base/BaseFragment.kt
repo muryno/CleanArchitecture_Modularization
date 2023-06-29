@@ -21,7 +21,9 @@ abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
     ): View? {
         val view = if (layoutResourceId != NO_LAYOUT_RESOURCE) {
             inflater.inflate(layoutResourceId, container, false).apply { bindViews() }
-        } else { null }
+        } else {
+            null
+        }
         return view
     }
     abstract fun View.bindViews()
