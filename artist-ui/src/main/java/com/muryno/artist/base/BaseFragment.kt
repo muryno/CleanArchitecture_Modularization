@@ -20,7 +20,9 @@ abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = if (layoutResourceId != NO_LAYOUT_RESOURCE) {
-            inflater.inflate(layoutResourceId, container, false).apply { bindViews() }
+            inflater.inflate(layoutResourceId, container, false).apply {
+                bindViews()
+            }
         } else {
             null
         }
