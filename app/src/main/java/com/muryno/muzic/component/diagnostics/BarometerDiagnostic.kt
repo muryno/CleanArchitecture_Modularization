@@ -5,7 +5,6 @@ import androidx.lifecycle.LifecycleOwner
 import com.kylecorry.andromeda.core.sensors.Quality
 import com.kylecorry.andromeda.sense.Sensors
 import com.kylecorry.andromeda.sense.barometer.IBarometer
-import com.kylecorry.trail_sense.diagnostics.BaseSensorQualityDiagnostic
 import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 import com.kylecorry.trail_sense.shared.sensors.SensorService
 
