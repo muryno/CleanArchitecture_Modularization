@@ -20,7 +20,6 @@ import com.kylecorry.andromeda.sense.compass.ICompass
 import com.kylecorry.andromeda.sense.location.IGPS
 import com.kylecorry.sol.science.geology.Geology
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.calibration.ui.CompassCalibrationView
 import com.kylecorry.trail_sense.shared.FormatService
 import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.declination.DeclinationFactory
