@@ -8,7 +8,6 @@ import com.kylecorry.andromeda.core.sensors.Quality
 import com.kylecorry.andromeda.sense.Sensors
 import com.kylecorry.andromeda.sense.accelerometer.Accelerometer
 import com.kylecorry.andromeda.sense.accelerometer.IAccelerometer
-import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 
 class AccelerometerDiagnostic(context: Context, lifecycleOwner: LifecycleOwner?) :
     BaseSensorQualityDiagnostic<IAccelerometer>(
