@@ -1,7 +1,6 @@
 package com.muryno.muzic.component.diagnostics
 
 import android.content.Context
-import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 import com.kylecorry.trail_sense.diagnostics.IDiagnostic
 import com.kylecorry.trail_sense.shared.UserPreferences
 
