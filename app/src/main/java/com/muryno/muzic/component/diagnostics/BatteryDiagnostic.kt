@@ -6,7 +6,6 @@ import com.kylecorry.andromeda.battery.Battery
 import com.kylecorry.andromeda.battery.BatteryHealth
 import com.kylecorry.andromeda.battery.IBattery
 import com.kylecorry.andromeda.permissions.Permissions
-import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 import com.kylecorry.trail_sense.shared.UserPreferences
 
 class BatteryDiagnostic(
