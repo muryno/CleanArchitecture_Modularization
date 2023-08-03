@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import com.kylecorry.andromeda.permissions.Permissions
-import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 import com.kylecorry.trail_sense.diagnostics.IDiagnostic
 
 class CameraDiagnostic(private val context: Context) : IDiagnostic {
