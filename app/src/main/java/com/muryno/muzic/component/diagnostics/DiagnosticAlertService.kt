@@ -12,7 +12,6 @@ import com.kylecorry.andromeda.markdown.MarkdownService
 import com.kylecorry.andromeda.permissions.Permissions
 import com.kylecorry.andromeda.permissions.SpecialPermission
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.diagnostics.DiagnosticCode
 import com.kylecorry.trail_sense.diagnostics.DiagnosticCodeDescriptionLookup
 import com.kylecorry.trail_sense.diagnostics.DiagnosticCodeTitleLookup
 import com.kylecorry.trail_sense.diagnostics.IDiagnosticAlertService
