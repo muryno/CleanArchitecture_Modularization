@@ -34,7 +34,7 @@
         android:strokeColor="#33FFFFFF" />
     <path
         android:fillColor="#00000000"
-        android:pathData="M59,0L59,108"
+        android:pathData="M59,0L59,109"
         android:strokeWidth="0.8"
         android:strokeColor="#33FFFFFF" />
     <path
