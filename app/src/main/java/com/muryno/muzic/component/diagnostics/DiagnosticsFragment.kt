@@ -13,7 +13,6 @@ import com.kylecorry.andromeda.list.ListView
 import com.kylecorry.trail_sense.R
 import com.kylecorry.trail_sense.databinding.FragmentDiagnosticsBinding
 import com.kylecorry.trail_sense.databinding.ListItemPlainIconBinding
-import com.kylecorry.trail_sense.diagnostics.GPSDiagnostic
 import com.kylecorry.trail_sense.diagnostics.IDiagnostic
 import com.kylecorry.trail_sense.diagnostics.LightSensorDiagnostic
 import com.kylecorry.trail_sense.diagnostics.MagnetometerDiagnostic
