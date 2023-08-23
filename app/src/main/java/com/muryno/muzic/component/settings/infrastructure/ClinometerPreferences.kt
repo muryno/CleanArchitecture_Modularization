@@ -5,7 +5,6 @@ import com.kylecorry.andromeda.preferences.BooleanPreference
 import com.kylecorry.sol.units.Distance
 import com.kylecorry.sol.units.DistanceUnits
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.settings.infrastructure.IClinometerPreferences
 import com.kylecorry.trail_sense.shared.preferences.PreferencesSubsystem
 
 class ClinometerPreferences(private val context: Context) : IClinometerPreferences {
