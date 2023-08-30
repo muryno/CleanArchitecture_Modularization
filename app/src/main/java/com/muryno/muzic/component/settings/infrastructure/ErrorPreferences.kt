@@ -1,7 +1,6 @@
 package com.muryno.muzic.component.settings.infrastructure
 
 import android.content.Context
-import com.kylecorry.trail_sense.settings.infrastructure.IErrorPreferences
 import com.kylecorry.trail_sense.shared.ErrorBannerReason
 import com.kylecorry.trail_sense.shared.preferences.PreferencesSubsystem
 
