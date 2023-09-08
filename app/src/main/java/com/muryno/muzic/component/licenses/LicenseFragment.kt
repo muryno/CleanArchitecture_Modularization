@@ -6,7 +6,6 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.kylecorry.andromeda.alerts.Alerts
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.licenses.Licenses
 
 
 class LicenseFragment : PreferenceFragmentCompat() {
