@@ -14,7 +14,6 @@ import com.kylecorry.trail_sense.R
 import com.kylecorry.trail_sense.databinding.FragmentDiagnosticsBinding
 import com.kylecorry.trail_sense.databinding.ListItemPlainIconBinding
 import com.kylecorry.trail_sense.diagnostics.IDiagnostic
-import com.kylecorry.trail_sense.diagnostics.PedometerDiagnostic
 import com.kylecorry.trail_sense.diagnostics.Severity
 import com.kylecorry.trail_sense.diagnostics.WeatherMonitorDiagnostic
 import com.kylecorry.trail_sense.shared.colors.AppColor
