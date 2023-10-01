@@ -24,7 +24,7 @@
             android:fontFamily="cursive"
             android:text="Artist"
             android:textColor="@color/black"
-            android:textSize="34sp" />
+            android:textSize="32sp" />
 
         <LinearLayout
             android:id="@+id/relativeLayout"
