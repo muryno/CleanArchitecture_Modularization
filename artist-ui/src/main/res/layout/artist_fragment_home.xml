@@ -20,7 +20,7 @@
             android:id="@+id/details_publish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="cursive"
             android:text="Artist"
             android:textColor="@color/black"
