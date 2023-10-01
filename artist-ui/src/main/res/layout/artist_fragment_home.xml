@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1.4">
+            android:weightSum="1.2">
 
             <EditText
                 android:id="@+id/music_search"
