@@ -4,7 +4,6 @@ import android.content.Context
 import com.kylecorry.andromeda.preferences.BooleanPreference
 import com.kylecorry.andromeda.preferences.DurationPreference
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.settings.infrastructure.PreferenceRepo
 import java.time.Duration
 
 class AltimeterPreferences(context: Context) : PreferenceRepo(context) {
