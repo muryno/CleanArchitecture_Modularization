@@ -4,7 +4,6 @@ import android.content.Context
 import com.kylecorry.andromeda.preferences.BooleanPreference
 import com.kylecorry.andromeda.preferences.StringEnumPreference
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.settings.infrastructure.PreferenceRepo
 
 class CameraPreferences(context: Context) : PreferenceRepo(context), ICameraPreferences {
 
