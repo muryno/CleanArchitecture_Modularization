@@ -1,6 +1,5 @@
 package com.muryno.muzic.component.diagnostics
 
-import com.kylecorry.trail_sense.diagnostics.Severity
 import com.kylecorry.trail_sense.shared.data.Identifiable
 
 // Max ID = 31
