@@ -12,7 +12,8 @@ import com.muryno.artist.R
 import com.muryno.artist.artist.model.ArtistUIModel
 class ArtistAdapter:
     RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
-    lateinit var clickedArtist: (ArtistUIModel) -> Unit
+
+    lateinit var mClickedArtist: (ArtistUIModel) -> Unit
     private val callback = object : DiffUtil.ItemCallback<ArtistUIModel>() {
         override fun areItemsTheSame(
             oldItemNews: ArtistUIModel,
@@ -35,7 +36,7 @@ class ArtistAdapter:
             parent,
             false
         )
-        return MyViewHolder(bindingView, clickedArtist)
+        return MyViewHolder(bindingView, mClickedArtist)
     }
     override fun getItemCount(): Int {
         return differ.currentList.size
