@@ -23,7 +23,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     override val layoutResourceId = R.layout.artist_fragment_home
      private lateinit var artistListView: RecyclerView
      private lateinit var progressBar: ProgressBar
-     lateinit var searchButton: Button
+     private lateinit var searchButton: Button
      lateinit var musicSearch: EditText
      lateinit var emptyState: View
     override fun View.bindViews() {
