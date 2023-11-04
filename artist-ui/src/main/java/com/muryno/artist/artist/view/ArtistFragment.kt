@@ -21,7 +21,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
     override val layoutResourceId = R.layout.artist_fragment_home
-     lateinit var artistListView: RecyclerView
+     private lateinit var artistListView: RecyclerView
      lateinit var progressBar: ProgressBar
      lateinit var searchButton: Button
      lateinit var musicSearch: EditText
