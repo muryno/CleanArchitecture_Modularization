@@ -20,7 +20,7 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:text="@string/oops_no_artist_available"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
 </LinearLayout>
