@@ -28,6 +28,7 @@ abstract class BaseFragment<VIEW_STATE : Any> : Fragment() {
         }
         return view
     }
+
     abstract fun View.bindViews()
     protected fun closeSoftKeyboard() {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE)
