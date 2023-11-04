@@ -5,7 +5,7 @@ data class ArtistUIModel(
     val id: String,
     val city: String,
     val name: String,
-    val gender: String,
     val state: String,
+    val gender: String,
     val description: String,
 )
