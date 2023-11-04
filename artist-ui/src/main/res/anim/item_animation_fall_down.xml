@@ -10,7 +10,7 @@
     <alpha
         android:fromAlpha="0"
         android:interpolator="@android:anim/decelerate_interpolator"
-        android:toAlpha="1" />
+        android:toAlpha="1"/>
 
     <scale
         android:fromXScale="105%"
@@ -19,6 +19,6 @@
         android:pivotX="50%"
         android:pivotY="50%"
         android:toXScale="100%"
-        android:toYScale="100%" />
+        android:toYScale="100%"/>
 
 </set>
