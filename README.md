@@ -15,7 +15,6 @@ The "Practical Guide to Building Android Apps with Clean Architecture, Modulariz
 - dark/light mode supported
 
 
-
 ### Screen
 
 <img width="336" alt="Screenshot 2022-10-25 at 22 43 48" src="https://user-images.githubusercontent.com/26343440/197887992-51323194-0dcb-48e6-ae93-e570633aa807.png">
