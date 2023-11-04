@@ -10,7 +10,7 @@ class ArtistPresentationToUIMapper {
             name = input.name,
             city = input.city,
             state = input.name,
-            score = input.score
+            score = input.score,
             gender = input.gender,
             description = input.description,
         )
