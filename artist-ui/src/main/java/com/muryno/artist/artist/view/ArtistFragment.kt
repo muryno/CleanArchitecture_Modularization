@@ -25,7 +25,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
      private lateinit var progressBar: ProgressBar
      private lateinit var searchButton: Button
      private lateinit var musicSearch: EditText
-     lateinit var emptyState: View
+     private lateinit var emptyState: View
     override fun View.bindViews() {
         artistListView = findViewById(R.id.artist_recyclerView)
         progressBar = findViewById(R.id.artist_progressbar)
