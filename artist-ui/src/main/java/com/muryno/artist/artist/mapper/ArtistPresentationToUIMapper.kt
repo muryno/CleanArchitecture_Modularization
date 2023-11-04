@@ -8,8 +8,8 @@ class ArtistPresentationToUIMapper {
         return ArtistUIModel(
             id = input.id,
             name = input.name,
-            gender = input.gender,
             city = input.city,
+            gender = input.gender,
             state = input.name,
             description = input.description,
             score = input.score
