@@ -13,6 +13,7 @@ import com.kylecorry.trail_sense.shared.sensors.CustomGPS
 import com.kylecorry.trail_sense.shared.sensors.overrides.CachedGPS
 import com.kylecorry.trail_sense.shared.sensors.overrides.OverrideGPS
 import com.muryno.muzic.component.diagnostics.status.StatusBadge
+import com.muryno.muzic.component.diagnostics.status.StatusBadgeProvider
 import java.time.Duration
 import java.time.Instant
 
