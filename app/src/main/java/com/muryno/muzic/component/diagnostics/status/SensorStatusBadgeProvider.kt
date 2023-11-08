@@ -6,7 +6,6 @@ import com.kylecorry.andromeda.core.sensors.ISensor
 import com.kylecorry.andromeda.core.sensors.Quality
 import com.kylecorry.andromeda.sense.mock.MockSensor
 import com.kylecorry.trail_sense.R
-import com.kylecorry.trail_sense.diagnostics.status.StatusBadgeProvider
 import com.kylecorry.trail_sense.shared.CustomUiUtils
 import com.kylecorry.trail_sense.shared.FormatService
 
