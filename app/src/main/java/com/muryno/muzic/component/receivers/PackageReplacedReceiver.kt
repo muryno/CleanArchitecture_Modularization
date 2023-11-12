@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.kylecorry.trail_sense.receivers.TrailSenseServiceUtils
 
 class PackageReplacedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
