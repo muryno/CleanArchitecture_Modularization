@@ -25,7 +25,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         var result = 0 // Returns connection type. 0: none; 1: mobile data; 2: wifi
         val cm =
             applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
-        val capabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
+        val networkCapabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
         if (capabilities != null) {
             when {
                 capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
