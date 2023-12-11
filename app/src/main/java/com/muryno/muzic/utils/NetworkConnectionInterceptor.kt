@@ -28,7 +28,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         val networkCapabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
         if (networkCapabilities != null) {
             when {
-                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
                     result = 2
                 }
                 capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
