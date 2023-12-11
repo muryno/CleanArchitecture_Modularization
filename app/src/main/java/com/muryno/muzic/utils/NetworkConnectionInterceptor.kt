@@ -26,7 +26,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         val cm =
             applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
         val networkCapabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
-        if (capabilities != null) {
+        if (networkCapabilities != null) {
             when {
                 capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
                     result = 2
