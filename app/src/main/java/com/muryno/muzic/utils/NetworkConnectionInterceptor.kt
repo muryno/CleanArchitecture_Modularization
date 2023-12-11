@@ -34,7 +34,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
                 networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
                     result = 1
                 }
-                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN) -> {
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN) -> {
                     result = 3
                 }
             }
