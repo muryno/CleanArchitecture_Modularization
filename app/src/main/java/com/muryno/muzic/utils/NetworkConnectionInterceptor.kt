@@ -14,7 +14,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun intercept(chain: Interceptor.Chain): Response {
         if (isNetworkAvailable() == 0) {
-            throw NoInternetException("Make sure you have an active internet connection")
+            throw NoInternetException("Ensure you have an active internet connection")
         } else {
             return chain.proceed(chain.request())
         }
