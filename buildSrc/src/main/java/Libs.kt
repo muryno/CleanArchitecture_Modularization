@@ -72,6 +72,11 @@ object Libs {
     const val ROOMKTX = "androidx.room:room-ktx:2.6.0"
     const val ROOM_TESTING = "androidx.room:room-testing:2.6.0"
 
+    //-----------------------------------------------------------------------------------------------------
+    //NAVIGATION
+    const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:2.7.7"
+    const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:2.7.7"
+
 
     //JETPACK COMPOSE
     //-----------------------------------------------------------------------------------------------------
