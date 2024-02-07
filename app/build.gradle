@@ -52,6 +52,7 @@ android {
             option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
         }
     }
+
     testOptions {
         unitTests {
             includeAndroidResources = true
