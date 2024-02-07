@@ -85,7 +85,6 @@ dependencies {
     implementation(project(BuildModules.ARTIST))
     implementation(project(BuildModules.DATA_SOURCE))
 
-
     //CORE --------------------------------------------------------------------------------------
     implementation(Libs.Core)
     implementation(Libs.RecyclerView)
