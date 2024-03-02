@@ -5,7 +5,6 @@ import com.muryno.data.model.ArtistAlbumDataModel
 
 
 class ArtistAlbumApiToResponseDataMapper {
-
     fun toData(input: AlbumReleaseGroupApiModel): ArtistAlbumDataModel {
         return ArtistAlbumDataModel(
             id = input.id,
