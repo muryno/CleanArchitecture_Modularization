@@ -9,10 +9,7 @@ import dagger.hilt.android.components.FragmentComponent
 @Module
 @InstallIn(FragmentComponent::class)
 class ArtistUiModule {
-
     @Provides
     fun providesArtistPresentationToUIMapper() =
         ArtistPresentationToUIMapper()
-
-
 }

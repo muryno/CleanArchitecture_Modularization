@@ -13,12 +13,9 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 class ArtistPresentationModule {
-
     @Provides
     fun providesArtistDomainToPresentationMapper() =
         ArtistDomainToPresentationMapper()
-
-
 
     @Provides
     fun providesArtistUseCase(
