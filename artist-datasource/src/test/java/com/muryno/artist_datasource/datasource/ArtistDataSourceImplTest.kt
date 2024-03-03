@@ -148,7 +148,7 @@ class ArtistDataSourceImplTest {
 
             // When
             val actualNavigationCommand =
-                classUnderTest.getArtistAlbumFromServer(artistId = artistId)
+                classUnderTest.getArtistAlbumFromApi(artistId = artistId)
 
             // Then
             assertEquals(expectedResult, actualNavigationCommand.first())
