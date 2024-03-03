@@ -22,7 +22,7 @@ class ArtistLiveRepository(
 
 
     override suspend fun artistAlbum(artistId: String): List<ArtistAlbumDomainModel> =
-        artistDataSource.getArtistAlbumFromServer(
+        artistDataSource.getArtistAlbumFromApi(
             artistId
         ).map(artistAlbumDataToDomainMapper::toDomain)
 
