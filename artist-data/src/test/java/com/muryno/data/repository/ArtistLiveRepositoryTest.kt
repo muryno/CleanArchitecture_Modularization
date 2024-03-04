@@ -141,7 +141,7 @@ class ArtistLiveRepositoryTest {
         //given
 
         given(
-            artistDataSource.getArtistAlbumFromServer(artistId = artistId)
+            artistDataSource.getArtistAlbumFromApi(artistId = artistId)
         ).willReturn(artistAlbumDataModelList)
 
         given(
