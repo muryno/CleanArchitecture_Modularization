@@ -19,7 +19,7 @@ class ArtistRemoteDataSource(
     }
 
 
-    override suspend fun getArtistAlbumFromServer(
+    override suspend fun getArtistAlbumFromApi(
         artistId: String
     ): List<ArtistAlbumDataModel> {
         val data = musicApiService.fetchArtistAlbumFromServer(artistId = artistId)
