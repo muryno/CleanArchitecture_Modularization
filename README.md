@@ -1,8 +1,6 @@
-## Practical Guide to Building Android Apps with Clean Architecture, Modularization and Unit Testing
+## The "Practical Guide to Building Android Apps with Clean Architecture, Modularization, and Unit Testing" is a comprehensive resource that outlines best practices for developing robust and maintainable Android applications. Detailed in a Medium article [Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization ](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2u, this guide emphasizes the importance of using Clean Architecture, modularization, and unit testing to enhance app quality and scalability
 
 
-### Architecture and Structure
-* Clean Architecture & MVVM & Moduarization & Unit Testing
 
 ## Project Modules
 * artist-domain
@@ -14,21 +12,7 @@
 
 
 
-- [Medium Post: Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization and Unit Testing](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2)
-
-
-
-
-### Library used
-* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) (Jetpack)
-* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) (Jetpack)
-* [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
-* [Retrofit2](https://square.github.io/retrofit/)
-* [coroutine](https://developer.android.com/kotlin/coroutines)
-* [UNIT TEST](https://developer.android.com/training/testing/unit-testing)
-*  [Coroutine best practice](https://developer.android.com/kotlin/coroutines/coroutines-best-practices)
-
-
+- [Medium Post: Practical Guide to Building Powerful and Easy-to-Maintain Android Apps with Clean Architecture, Modularization ](https://murainoyakubu.medium.com/practical-guide-to-building-powerful-and-easy-to-maintain-android-apps-with-clean-architecture-c6c8b592a0f2)
 
 
 
