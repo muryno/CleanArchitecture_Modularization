@@ -9,7 +9,6 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 class NetworkConnectionInterceptor(context: Context) : Interceptor {
-
     private val applicationContext: Context = context.applicationContext;
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -21,7 +20,6 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         }
 
     }
-
     @RequiresApi(Build.VERSION_CODES.M)
     private fun isNetworkAvailable(): Int {
         var result = 0 // Returns connection type. 0: none; 1: mobile data; 2: wifi

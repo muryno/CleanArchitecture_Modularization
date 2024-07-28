@@ -16,14 +16,12 @@ android {
         multiDexEnabled = true
 
     }
-
     namespace = BuildAndroidConfig.APPLICATION_ARTIST_UI
 
     buildFeatures {
         viewBinding = true
+        compose = true
     }
-
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -31,8 +29,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
-
 }
 
 // Allow references to generated code
@@ -73,7 +69,8 @@ dependencies {
     implementation(Libs.ROOMKTX)
 
     //HILT----------------------------------------------------------------------------------------
-    implementation(Libs.HILT)
-    kapt(Libs.HILT_COMPILER)
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt ("com.google.dagger:hilt-compiler:2.51.1")
 
 }

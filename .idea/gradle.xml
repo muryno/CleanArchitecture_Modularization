@@ -28,6 +28,7 @@
             <option value="$PROJECT_DIR$/artist-presentation" />
             <option value="$PROJECT_DIR$/artist-ui" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/song" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

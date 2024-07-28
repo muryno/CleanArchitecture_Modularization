@@ -21,7 +21,7 @@ object Libs {
     //Android Component
     //-----------------------------------------------------------------------------------------------------
     const val AppCompat = "androidx.appcompat:appcompat:1.5.1"
-    const val Core = "androidx.core:core-ktx:1.10.1"
+    const val Core = "androidx.core:core-ktx:1.9.0"
     const val RecyclerView = "androidx.recyclerview:recyclerview:1.2.1"
     const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
     const val fragment = "androidx.fragment:fragment-ktx:1.5.3"
@@ -67,10 +67,10 @@ object Libs {
 
     //-----------------------------------------------------------------------------------------------------
     //ROOM DATABASE
-    const val ROOM = "androidx.room:room-runtime:2.6.0"
-    const val ROOM_COMPILER_Kap = "androidx.room:room-compiler:2.6.0"
-    const val ROOMKTX = "androidx.room:room-ktx:2.6.0"
-    const val ROOM_TESTING = "androidx.room:room-testing:2.6.0"
+    const val ROOM = "androidx.room:room-runtime:2.4.3"
+    const val ROOM_COMPILER_Kap = "androidx.room:room-compiler:2.4.3"
+    const val ROOMKTX = "androidx.room:room-ktx:2.4.3"
+    const val ROOM_TESTING = "androidx.room:room-testing:2.4.3"
 
     //-----------------------------------------------------------------------------------------------------
     //NAVIGATION

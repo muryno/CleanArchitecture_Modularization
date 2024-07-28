@@ -1,8 +1,5 @@
 package com.muryno.artist.artist.model
 
-import java.io.Serializable
-
-
 data class ArtistUIModel(
     val id: String,
     val name: String,
