@@ -48,8 +48,8 @@ dependencies {
     implementation(Libs.MaterialDesign)
     implementation(Libs.AppCompat)
 
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation(Libs.NAVIGATION_FRAGMENT)
+    implementation(Libs.NAVIGATION_UI)
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
@@ -69,6 +69,7 @@ dependencies {
     implementation(Libs.ROOMKTX)
 
     //HILT----------------------------------------------------------------------------------------
+
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt ("com.google.dagger:hilt-compiler:2.51.1")
 

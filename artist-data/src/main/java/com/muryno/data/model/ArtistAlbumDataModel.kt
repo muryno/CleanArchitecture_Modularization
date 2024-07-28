@@ -1,6 +1,5 @@
 package com.muryno.data.model
 
-
 data class ArtistAlbumDataModel(
     val primaryType: String,
     val releaseDate: String,
