@@ -11,7 +11,7 @@
         android:id="@+id/emptyImage"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:contentDescription=""
+        android:contentDescription="an"
         tools:srcCompat="@drawable/blank" />
 
     <androidx.appcompat.widget.AppCompatTextView
