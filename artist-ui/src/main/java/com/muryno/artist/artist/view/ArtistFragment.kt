@@ -21,11 +21,11 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     @Inject
     lateinit var artistToUiMapper: ArtistPresentationToUIMapper
     override val layoutResourceId = R.layout.artist_fragment_home
-     lateinit var artistListView: RecyclerView
-     lateinit var progressBar: ProgressBar
-     lateinit var searchButton: Button
-     lateinit var musicSearch: EditText
-     lateinit var emptyState: View
+     private lateinit var artistListView: RecyclerView
+     private lateinit var progressBar: ProgressBar
+     private lateinit var searchButton: Button
+     private lateinit var musicSearch: EditText
+     private lateinit var emptyState: View
     override fun View.bindViews() {
         artistListView = findViewById(R.id.artist_recyclerView)
         progressBar = findViewById(R.id.artist_progressbar)
@@ -36,7 +36,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     private val artist = "London"
     private val artistAdapter by lazy {
         ArtistAdapter().apply {
-            clickedArtist = {
+            mClickedArtist = {
                 closeSoftKeyboard()
                 viewModel.onEntered(artistName = musicSearch.text.toString())
             }
@@ -44,7 +44,7 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
     }
     override fun onResume() {
         super.onResume()
-        viewModel.viewState.observe(viewLifecycleOwner){viewState->
+        viewModel.viewState.observe(viewLifecycleOwner){ viewState->
             if (artistListView.adapter == null) {
                 artistListView.adapter = artistAdapter
             }

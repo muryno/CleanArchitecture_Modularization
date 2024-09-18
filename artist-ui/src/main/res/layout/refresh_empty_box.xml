@@ -6,24 +6,21 @@
     android:gravity="center"
     android:orientation="vertical">
 
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/emptyImage"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:contentDescription=""
+        android:layout_height="75dp"
+        android:contentDescription="an image"
         tools:srcCompat="@drawable/blank" />
 
     <androidx.appcompat.widget.AppCompatTextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="18dp"
         android:gravity="center"
-        android:text="@string/ooops_nno_artist_available"
-        android:textSize="18sp"
+        android:text="@string/oops_no_artist_available"
+        android:textSize="14sp"
         android:textStyle="bold" />
-
 
 </LinearLayout>
