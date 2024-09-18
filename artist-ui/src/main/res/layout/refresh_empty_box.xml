@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/emptyImage"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:contentDescription="an image"
         tools:srcCompat="@drawable/blank" />
 
