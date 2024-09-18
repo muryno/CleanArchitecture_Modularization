@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="@string/ooops_no_artist_available"
+        android:text="@string/oops_no_artist_available"
         android:textSize="18sp"
         android:textStyle="bold" />
 
