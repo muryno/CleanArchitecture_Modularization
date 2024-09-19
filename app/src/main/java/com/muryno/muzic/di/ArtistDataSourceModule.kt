@@ -32,7 +32,6 @@ class ArtistDataSourceModule {
     fun providerArtistApiToResponseDataMapper() =
         ArtistApiToResponseDataMapper()
 
-
     @Provides
     fun providerArtistRemoteDataSource(
         musicApiService: MusicApiService,
