@@ -23,7 +23,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class ArtistDataSourceModule {
 
-
     @Provides
     fun providerArtistAlbumApiToResponseDataMapper() =
         ArtistAlbumApiToResponseDataMapper()
@@ -31,8 +30,6 @@ class ArtistDataSourceModule {
     @Provides
     fun providerArtistApiToResponseDataMapper() =
         ArtistApiToResponseDataMapper()
-
-
 
     @Provides
     fun providerArtistRemoteDataSource(
