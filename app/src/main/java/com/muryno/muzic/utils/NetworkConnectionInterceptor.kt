@@ -14,7 +14,7 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun intercept(chain: Interceptor.Chain): Response {
         if (isNetworkAvailable() == 0) {
-            throw NoInternetException("Make sure you have an active data connection")
+            throw NoInternetException("Ensure you have an active internet connection")
         } else {
             return chain.proceed(chain.request())
         }
@@ -25,16 +25,16 @@ class NetworkConnectionInterceptor(context: Context) : Interceptor {
         var result = 0 // Returns connection type. 0: none; 1: mobile data; 2: wifi
         val cm =
             applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
-        val capabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
-        if (capabilities != null) {
+        val networkCapabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
+        if (networkCapabilities != null) {
             when {
-                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
                     result = 2
                 }
-                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
                     result = 1
                 }
-                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN) -> {
+                networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN) -> {
                     result = 3
                 }
             }
