@@ -9,6 +9,7 @@ data class ArtistDataModel(
     val gender: String,
     val type: String,
     val state: String,
+    val country: String,
     val disambiguation: String,
     val score: Int
 ): Serializable

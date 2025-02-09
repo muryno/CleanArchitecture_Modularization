@@ -11,7 +11,8 @@ class ArtistDataToDomainMapper {
             name = input.name,
             gender = input.gender,
             type = input.type,
-            state = input.state ,
+            state = input.state,
+            country = input.country,
             disambiguation = input.disambiguation,
             score = input.score
         )

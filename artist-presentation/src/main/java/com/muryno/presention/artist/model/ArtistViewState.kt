@@ -9,4 +9,7 @@ data class ArtistViewState(
     fun isArtistReady(
         artist: List<ArtistPresentationModel>
     ) = copy(artist = artist, isLoading = false)
+    
+    fun isArtistEmpty() = copy(isLoading = false)
+
 }

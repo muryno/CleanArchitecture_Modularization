@@ -117,11 +117,23 @@ class ArtistLiveRepositoryTest {
         val name = "artist"
         val firstReleaseDate = "wizzy"
         val primaryType = "artist"
+        val genre: "afro"
+        val label: "Republic"
+        val shortDescription: "good things"
+        val fullDescription: "good things come to everyone"
+        val albumImage: "https://img.com" 
+
+
 
 
         val artistAlbumDataModelList = arrayListOf(
             ArtistAlbumDataModel(
                 id = id,
+                label = label,
+                albumImage = albumImage,
+                genre = genre,
+                shortDescription = shortDescription
+                fullDescription = fullDescription,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,
@@ -132,6 +144,11 @@ class ArtistLiveRepositoryTest {
         val expectedResult = arrayListOf(
             ArtistAlbumDomainModel(
                 id = id,
+                label = label,
+                genre = genre,
+                albumImage = albumImage,
+                shortDescription = shortDescription,
+                fullDescription = fullDescription,
                 title =  name,
                 releaseDate = firstReleaseDate,
                 disambiguation = disambiguation,

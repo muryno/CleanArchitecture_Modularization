@@ -17,6 +17,7 @@ object BuildAndroidConfig {
     const val VERSION_NAME = "1.0"
 
     const val ANDROID_JUNIT_RUNNER = "androidx.test.runner.AndroidJUnitRunner"
-
+    
+    const val JVM_TARGET = "1.8"
 
 }

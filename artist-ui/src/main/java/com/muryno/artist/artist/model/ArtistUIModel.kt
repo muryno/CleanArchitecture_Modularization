@@ -8,4 +8,5 @@ data class ArtistUIModel(
     val state: String,
     val gender: String,
     val description: String,
+    val country: String,
 )

@@ -13,6 +13,7 @@ class ArtistPresentationToUIMapper {
             score = input.score,
             gender = input.gender,
             description = input.description,
+            country = input.country
         )
     }
 }

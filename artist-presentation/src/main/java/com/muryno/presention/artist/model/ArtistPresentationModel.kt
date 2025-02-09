@@ -7,6 +7,7 @@ data class ArtistPresentationModel(
     val gender: String,
     val city: String,
     val state: String,
+    val country: String,
     val description: String,
     val score: Int
 )

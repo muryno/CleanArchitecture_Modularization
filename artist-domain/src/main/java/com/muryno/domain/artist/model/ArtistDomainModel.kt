@@ -8,5 +8,6 @@ data class ArtistDomainModel(
     val type: String,
     val state: String,
     val disambiguation: String,
-    val score: Int
+    val score: Int,
+    val country: String
 )

@@ -23,6 +23,7 @@ class ArtistListApiDataToDomainMapperTest(
         private const val DISH_COMMENT_1 = "Great spicing."
         private const val DISH_RATING_1 = ""
         private const val RESTAURANT_NAME_1 = ""
+        private const val COUNTRY_NAME = ""
         private const val DISH_ID_2 = "ID2"
         private const val DISH_NAME_2 = "Cauliflower Steak"
         private const val DISH_COMMENT_2 = "So dry."
@@ -39,7 +40,8 @@ class ArtistListApiDataToDomainMapperTest(
                 name = DISH_RATING_1,
                 city = RESTAURANT_NAME_1,
                 state = RESTAURANT_NAME_1,
-                score = 1
+                score = 1,
+                country = COUNTRY_NAME
             ),
             testCase(
                 disambiguation = DISH_ID_2,
@@ -48,7 +50,8 @@ class ArtistListApiDataToDomainMapperTest(
                 name = DISH_RATING_2,
                 city = RESTAURANT_NAME_2,
                 state = RESTAURANT_NAME_2,
-                score = 1
+                score = 1,
+                country = COUNTRY_NAME
             )
         )
 
@@ -59,6 +62,7 @@ class ArtistListApiDataToDomainMapperTest(
             name: String,
             city: String,
             state: String,
+            country: String,
             score: Int
         ) = arrayOf(
             ArtistDomainModel(
@@ -68,6 +72,7 @@ class ArtistListApiDataToDomainMapperTest(
                 type = city,
                 state = state,
                 score = 1,
+                country = country,
                 gender = gender
             ),
             ArtistPresentationModel(
@@ -76,6 +81,7 @@ class ArtistListApiDataToDomainMapperTest(
                 name = name,
                 city = city,
                 state = state,
+                country = country,
                 score =score,
                 gender = gender
             )

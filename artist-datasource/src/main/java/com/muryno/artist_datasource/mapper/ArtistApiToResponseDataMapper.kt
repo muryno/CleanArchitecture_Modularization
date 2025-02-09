@@ -14,6 +14,7 @@ class ArtistApiToResponseDataMapper {
             state = input.area?.name ?: "",
             disambiguation = input.disambiguation ?: "",
             score = input.score ?: 0
+            country = input.country ?: ""
         )
     }
 }
