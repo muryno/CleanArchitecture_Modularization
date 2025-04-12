@@ -10,10 +10,13 @@ class ArtistAlbumApiToResponseDataMapper {
             id = input.id,
             primaryType = input.primaryType,
             title = input.title,
-            genre = input.genre ?: "",
-            label = input.label?:"",
+            genre = input.genre.orEmpty(),
+            label = input.label.orEmpty(),
             releaseDate = input.firstReleaseDate,
-            disambiguation = input.disambiguation
+            disambiguation = input.disambiguation,
+            shortDescription = "",
+            fullDescription = "",
+            albumImage = ""
         )
     }
 }

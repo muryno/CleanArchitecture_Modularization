@@ -13,7 +13,8 @@ class ArtistDomainToPresentationMapper {
             city = input.type,
             state = input.name,
             description = input.disambiguation,
-            score = input.score
+            score = input.score,
+            country = input.country
         )
     }
 }
