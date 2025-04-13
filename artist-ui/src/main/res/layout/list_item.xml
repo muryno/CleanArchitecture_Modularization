@@ -86,5 +86,26 @@
             app:layout_constraintStart_toStartOf="@+id/txt_city_label"
             app:layout_constraintTop_toBottomOf="@+id/txt_city_label" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txt_city"
+            app:layout_constraintTop_toBottomOf="@+id/txt_city"
+            tools:text="Country" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_country_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/country"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/txt_city_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_city_label" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
