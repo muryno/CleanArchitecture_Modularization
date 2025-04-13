@@ -4,7 +4,6 @@ plugins {
     id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.DAGGER_HILT)
     id(BuildPlugins.NAV_GRAPH)
-
 }
 
 android {
@@ -29,6 +28,9 @@ android {
     kotlinOptions {
         jvmTarget = BuildAndroidConfig.JVM_TARGET
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = BuildDepVersions.COMPOSE_COMPILER
+    }
 }
 
 // Allow references to generated code
@@ -50,6 +52,7 @@ dependencies {
 
     implementation(Libs.NAVIGATION_FRAGMENT)
     implementation(Libs.NAVIGATION_UI)
+    implementation(Libs.COMPOSE_RUNTIME)
 
     //RETROFIT, OKHTTP & GSON ----------------------------------------------------------------------------------------
     implementation(Libs.RETROFIT)
@@ -70,7 +73,7 @@ dependencies {
 
     //HILT----------------------------------------------------------------------------------------
 
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt ("com.google.dagger:hilt-compiler:2.51.1")
+    implementation(Libs.HILT)
+    kapt(Libs.HILT_COMPILER)
 
 }
