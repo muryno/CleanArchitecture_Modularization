@@ -52,8 +52,6 @@ class ArtistAdapter:
 
         private val txtCity: TextView by lazy { itemView.findViewById(R.id.txt_city) }
 
-        private val txtCountry: TextView by lazy { itemView.findViewById(R.id.txt_country) }
-
         private val txtGender: TextView by lazy { itemView.findViewById(R.id.txt_gender) }
 
         private val txtDescriptionLabel: TextView by lazy { itemView.findViewById(R.id.txt_description_label) }
@@ -65,8 +63,6 @@ class ArtistAdapter:
             txtCity.text = item.city
 
             txtGender.text = item.gender
-
-            txtCountry.text = item.country
 
             txtDescriptionLabel.text = item.description
             

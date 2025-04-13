@@ -24,14 +24,12 @@ class ArtistFragment : BaseFragment<ArtistViewState>(){
      private lateinit var artistListView: RecyclerView
      private lateinit var progressBar: ProgressBar
      private lateinit var searchButton: Button
-     private lateinit var closeButton: Button
      private lateinit var musicSearch: EditText
      private lateinit var emptyState: View
     override fun View.bindViews() {
         artistListView = findViewById(R.id.artist_recyclerView)
         progressBar = findViewById(R.id.artist_progressbar)
         searchButton = findViewById(R.id.search_button)
-        closeButton = findViewById(R.id.close_button)
         musicSearch = findViewById(R.id.music_search)
         emptyState = findViewById(R.id.empty_state)
     }

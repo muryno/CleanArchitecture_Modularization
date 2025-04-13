@@ -60,8 +60,8 @@ object Libs {
 
     //-----------------------------------------------------------------------------------------------------
     //HILT
-    const val HILT = "com.google.dagger:hilt-android:2.38.1"
-    const val HILT_COMPILER = "com.google.dagger:hilt-compiler:2.38.1"
+    const val HILT = "com.google.dagger:hilt-android:2.51.1"
+    const val HILT_COMPILER = "com.google.dagger:hilt-compiler:2.51.1"
     const val HILT_COMPOSE_NAV = "androidx.hilt:hilt-navigation-compose:${v.HILT_COMPOSE}"
 
 
@@ -88,6 +88,7 @@ object Libs {
     const val COMPOSE_NAVIGATION = "androidx.navigation:navigation-compose:${v.COMPOSE}"
     const val COMPOSE_NAV_ANIM =
         "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
+    const val COMPOSE_RUNTIME = "androidx.compose.runtime:runtime:${v.COMPOSE_COMPILER}"
 
 
     //-----------------------------------------------------------------------------------------------------

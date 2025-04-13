@@ -8,13 +8,13 @@ class ArtistApiToResponseDataMapper {
   fun toData(input: ArtistApiModel): ArtistDataModel {
         return ArtistDataModel(
             id = input.id,
-            name = input.name ?: "",
-            gender = input.gender ?: "",
-            type = input.area?.sortName ?: "",
-            state = input.area?.name ?: "",
-            disambiguation = input.disambiguation ?: "",
-            score = input.score ?: 0
-            country = input.country ?: ""
+            name = input.name.orEmpty(),
+            gender = input.gender.orEmpty(),
+            type = input.area?.sortName.orEmpty(),
+            state = input.area?.name.orEmpty(),
+            disambiguation = input.disambiguation.orEmpty(),
+            score = input.score ?: 0,
+            country = input.country.orEmpty()
         )
     }
 }

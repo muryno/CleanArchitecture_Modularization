@@ -20,9 +20,6 @@ import org.mockito.BDDMockito.given
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
-
-
-
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
 class ArtistViewModelTest {
@@ -30,7 +27,6 @@ class ArtistViewModelTest {
     @get:Rule
     val instantTaskExecutorRule: TestRule =
         InstantTaskExecutorRule()
-
 
     private lateinit var classUnderTest: ArtistViewModel
 
@@ -80,6 +76,7 @@ class ArtistViewModelTest {
         val state = "artist"
         val type = "type"
         val gender = "male"
+        val country = "United Kingdom"
 
         val givenDish1 = ArtistDomainModel(
             id = dishId,
@@ -88,7 +85,8 @@ class ArtistViewModelTest {
             type = type,
             state = state,
             score = score,
-            gender = gender
+            gender = gender,
+            country = country
         )
         val givenDish2 = ArtistDomainModel(
             id = dishId,
@@ -97,7 +95,8 @@ class ArtistViewModelTest {
             type = type,
             state = state,
             score = score,
-            gender = gender
+            gender = gender,
+            country = country
         )
 
         val givenDishes = arrayListOf(givenDish1, givenDish2)
@@ -109,8 +108,10 @@ class ArtistViewModelTest {
             city = type,
             state = state,
             score = score,
-            gender = gender
+            gender = gender,
+            country = country
         )
+
         given(artistDomainMapper.toPresentation(givenDish1)).willReturn(expectedDish1)
         val expectedDish2 = ArtistPresentationModel(
             id = dishId,
@@ -119,7 +120,8 @@ class ArtistViewModelTest {
             city = type,
             state = state,
             score = score,
-            gender = gender
+            gender = gender,
+            country = country
         )
         given(artistDomainMapper.toPresentation(givenDish2)).willReturn(expectedDish2)
         val expectedDishes = listOf(expectedDish1, expectedDish2)
