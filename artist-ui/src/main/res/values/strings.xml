@@ -1,15 +1,17 @@
 <resources>
-    <string name="app_name">artist</string>
+    <string name="app_name_title">Artist</string>
     <string name="refresh">Refresh</string>
     <string name="oops_no_artist_available">Oops!! \nNo artist available...</string>
-    <string name="artist_name">artist name</string>
-    <string name="find">Find</string>
+    <string name="artist_name">artist name...</string>
+    <string name="find">FIND</string>
+    <string name="initial_artist_name">Chicago</string>
+    <string name="refresh_text">Refresh</string>
 
     <!-- TODO: Remove or mutate this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="artist">Artist:  </string>
-    <string name="city">City</string>
-    <string name="gender">Gender</string>
+    <string name="city">City: </string>
+    <string name="gender">Gender: </string>
     <string name="age">Age</string>
     <string name="score">Score</string>
     <string name="primarytype">primaryType</string>

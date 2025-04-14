@@ -19,6 +19,9 @@ object BuildDepVersions {
     const val COMPOSE_COMPILER = "1.5.1"
     const val COMPOSE_ACTIVITY = "1.3.1"
     const val COMPOSE_NAV_ANIM = "0.24.8-beta"
+    const val COMPOSE_MATERIAL_3 = "1.3.1"
+    const val COMPOSE_LIVEDATA = "1.7.8"
+    const val COMPOSE_PREVIEW = "1.7.8"
 
     //COIL (IMAGE LOADING)
     const val COIL_ACCOMPANIST = "0.15.0"
