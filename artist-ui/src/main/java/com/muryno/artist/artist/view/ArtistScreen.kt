@@ -128,7 +128,8 @@ fun ArtistItem(
             .fillMaxWidth()
             .padding(vertical = 4.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(0.dp)
     ) {
         Column(
             modifier = Modifier
