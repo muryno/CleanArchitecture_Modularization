@@ -140,7 +140,7 @@ fun ArtistItem(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Name: ",
+                    text = stringResource(id = R.string.artist),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                     modifier = Modifier.padding(top = 2.dp).width(70.dp)
@@ -156,7 +156,7 @@ fun ArtistItem(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "City: ",
+                    text = stringResource(id = R.string.city),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                     modifier = Modifier.padding(top = 2.dp).width(70.dp)
@@ -171,7 +171,7 @@ fun ArtistItem(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Gender: ",
+                    text = stringResource(id = R.string.gender),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
                     modifier = Modifier.padding(top = 2.dp).width(70.dp)
