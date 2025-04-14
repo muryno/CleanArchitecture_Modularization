@@ -89,6 +89,8 @@ object Libs {
     const val COMPOSE_NAV_ANIM =
         "com.google.accompanist:accompanist-navigation-animation:${v.COMPOSE_NAV_ANIM}"
     const val COMPOSE_RUNTIME = "androidx.compose.runtime:runtime:${v.COMPOSE_COMPILER}"
+    const val COMPOSE_MATERIAL_3 = "androidx.compose.material3:material3-android:${v.COMPOSE_MATERIAL_3}"
+    const val COMPOSE_LIVE_DATA = "androidx.compose.runtime:runtime-livedata:${v.COMPOSE_LIVEDATA}"
 
 
     //-----------------------------------------------------------------------------------------------------

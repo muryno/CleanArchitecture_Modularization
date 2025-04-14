@@ -68,6 +68,8 @@ dependencies {
 
     //ROOM ----------------------------------------------------------------------------------------
     implementation(Libs.ROOM)
+    implementation(Libs.COMPOSE_MATERIAL_3)
+    implementation(Libs.COMPOSE_LIVE_DATA)
     kapt(Libs.ROOM_COMPILER_Kap)
     implementation(Libs.ROOMKTX)
 
