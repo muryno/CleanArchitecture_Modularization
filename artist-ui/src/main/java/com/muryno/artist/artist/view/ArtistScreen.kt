@@ -38,7 +38,7 @@ fun ArtistScreen(
     ) {
         // Search bar and button
         Text(
-            text = stringResource(id = R.string.app_name),
+            text = stringResource(id = R.string.app_name_title),
             fontSize = 32.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Black,

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Artist</string>
+    <string name="app_name_title">Artist</string>
     <string name="refresh">Refresh</string>
     <string name="oops_no_artist_available">Oops!! \nNo artist available...</string>
     <string name="artist_name">artist name...</string>
