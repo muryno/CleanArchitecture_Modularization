@@ -12,10 +12,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.muryno.artist.R
 import com.muryno.artist.artist.mapper.ArtistPresentationToUIMapper
 import com.muryno.artist.artist.model.ArtistUIModel
 import com.muryno.presention.artist.viewmodel.ArtistViewModel
@@ -28,6 +30,7 @@ fun ArtistScreen(
     val viewState by viewModel.viewState.observeAsState()
     val keyboardController = LocalSoftwareKeyboardController.current
     var searchText by remember { mutableStateOf("") }
+    val initialArtistName = stringResource(id = R.string.initial_artist_name)
 
     Column(
         modifier = Modifier
@@ -36,7 +39,7 @@ fun ArtistScreen(
     ) {
         // Search bar and button
         Text(
-            text = "Artist",
+            text = stringResource(id = R.string.app_name),
             fontSize = 32.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Black,
@@ -55,7 +58,7 @@ fun ArtistScreen(
                 modifier = Modifier
                     .weight(1f)
                     .padding(end = 8.dp),
-                placeholder = { Text("artist name...") },
+                placeholder = { Text(stringResource(id = R.string.artist_name)) },
                 colors = TextFieldDefaults.colors(
                     unfocusedContainerColor = Color.Transparent,
                     focusedContainerColor = Color.Transparent
@@ -70,7 +73,7 @@ fun ArtistScreen(
                 shape = RoundedCornerShape(0.dp)
             ) {
                 Text(
-                    text = "FIND",
+                    text = stringResource(id = R.string.find),
                     color = Color.White,
                     fontSize = 16.sp,
                     modifier = Modifier.padding(10.dp)
@@ -118,7 +121,7 @@ fun ArtistScreen(
 
     // Initial search with default value
     LaunchedEffect(Unit) {
-        viewModel.onEntered("Chicago")
+        viewModel.onEntered(artistName = initialArtistName)
     }
 }
 
@@ -131,7 +134,10 @@ fun ArtistItem(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 4.dp)
-            .clickable { onClick() },
+            .clickable {
+                // TODO: Handle click event when detail screen exist
+                // onClick()
+            },
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
