@@ -70,6 +70,7 @@ dependencies {
     implementation(Libs.ROOM)
     implementation(Libs.COMPOSE_MATERIAL_3)
     implementation(Libs.COMPOSE_LIVE_DATA)
+    implementation(Libs.COMPOSE_TOOLING_PREVIEW)
     kapt(Libs.ROOM_COMPILER_Kap)
     implementation(Libs.ROOMKTX)
 

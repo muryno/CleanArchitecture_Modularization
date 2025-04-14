@@ -91,6 +91,7 @@ object Libs {
     const val COMPOSE_RUNTIME = "androidx.compose.runtime:runtime:${v.COMPOSE_COMPILER}"
     const val COMPOSE_MATERIAL_3 = "androidx.compose.material3:material3-android:${v.COMPOSE_MATERIAL_3}"
     const val COMPOSE_LIVE_DATA = "androidx.compose.runtime:runtime-livedata:${v.COMPOSE_LIVEDATA}"
+    const val COMPOSE_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview-android:${v.COMPOSE_PREVIEW}"
 
 
     //-----------------------------------------------------------------------------------------------------
