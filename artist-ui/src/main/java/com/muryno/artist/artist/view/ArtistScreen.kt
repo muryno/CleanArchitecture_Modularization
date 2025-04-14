@@ -1,6 +1,5 @@
 package com.muryno.artist.artist.view
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -98,22 +97,17 @@ fun ArtistScreen(
                             key = { it.id }
                         ) { artist ->
                             ArtistItem(
-                                artist = artist,
-                                onClick = {
-                                    keyboardController?.hide()
-                                    viewModel.onEntered(artistName = searchText)
-                                }
+                                artist = artist
                             )
                         }
                     }
                 } else {
-                    // Empty state
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text("No artists found")
-                    }
+                    EmptyArtistScreen(
+                        onEntered = { refreshText ->
+                            searchText = ""
+                            viewModel.onEntered(artistName = refreshText)
+                        }
+                    )
                 }
             }
         }
@@ -127,17 +121,12 @@ fun ArtistScreen(
 
 @Composable
 fun ArtistItem(
-    artist: ArtistUIModel,
-    onClick: () -> Unit
+    artist: ArtistUIModel
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 4.dp)
-            .clickable {
-                // TODO: Handle click event when detail screen exist
-                // onClick()
-            },
+            .padding(vertical = 4.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White)
     ) {
