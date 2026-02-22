@@ -3,8 +3,18 @@ package com.muryno.artist_datasource.mapper
 import com.muryno.artist_datasource.model.ArtistApiModel
 import com.muryno.data.model.ArtistDataModel
 
-
+/**
+ * Mapper class for converting artist API models to data layer models.
+ * Transforms [ArtistApiModel] from the MusicBrainz API into [ArtistDataModel]
+ * used in the data layer.
+ */
 class ArtistApiToResponseDataMapper {
+  /**
+   * Converts an [ArtistApiModel] to an [ArtistDataModel].
+   *
+   * @param input The artist API model to convert
+   * @return [ArtistDataModel] with mapped artist information
+   */
   fun toData(input: ArtistApiModel): ArtistDataModel {
         return ArtistDataModel(
             id = input.id,
